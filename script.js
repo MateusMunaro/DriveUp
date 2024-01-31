@@ -56,21 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-//script whatsapp 
-
-window.addEventListener('load', function () {
-  var whatsapp = document.getElementById('whatsapp');
-  var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-
-  // Ajusta a posição inicial com base na altura da janela
-  whatsapp.style.bottom = (windowHeight < 600) ? '10px' : '20px';
-
-  // Atualiza a posição quando a janela for redimensionada
-  window.addEventListener('resize', function () {
-      var newWindowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-      whatsapp.style.bottom = (newWindowHeight < 600) ? '10px' : '20px';
-  });
-});
+//script whatsapp para Iphone
 
 /* Menu dos idiomas */
 function menuIdiomas () {

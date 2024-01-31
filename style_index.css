@@ -355,12 +355,7 @@ section {
         transition: visibility 0.3s, opacity 0.3s, transform 0.5s ease-in-out; 
        
     }
-
-    .parceiro p {
-
-        text-align: center;
-    }
-
+    
     .parceiro img {
         visibility: visible;
         width: 100px;

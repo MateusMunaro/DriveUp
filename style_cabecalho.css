@@ -144,6 +144,8 @@ ul.caixa-bandeiras-ativa {
 @media screen and (max-device-width: 480px) {
     .icone-menu {
         display: block;
+        color: white;
+        background-color: rgba(102, 102, 102, 0.301);
         
     }
     header {
@@ -211,10 +213,10 @@ ul.caixa-bandeiras-ativa {
     display: flex; /* Adicionando flexbox para alinhar itens lado a lado */
     align-items: center; /* Centralizando verticalmente os itens */
     background: #40c351;
-    width: 2.5%; 
-    height: 5vh; 
-    padding: 0.3vw;
-    border-radius: 50%;
+    width: 50px; 
+    height: 50px; 
+    padding: 5px;
+    border-radius: 100px;
     transition: width 0.3s ease; /* Alterando a propriedade da transição para width */
 }
 .divwhatsapp img {
@@ -225,7 +227,7 @@ ul.caixa-bandeiras-ativa {
 
 .divwhatsapp p {
     visibility: hidden;
-    margin-left: 2%; /* Ajuste o espaçamento conforme necessário */
+    margin-left: 10px; /* Ajuste o espaçamento conforme necessário */
     color: #ffffff;
     text-decoration: none;
     text-underline-offset: none;
@@ -238,10 +240,10 @@ a {
 
 .divwhatsapp:hover {
     background: #40c351;
-    width: 7%; 
+    width: 140px; 
     height: 7vh; 
     border-radius: 100px;
-    margin-left: -3%; /* Ajustando o margin-left para abrir para a esquerda */
+    margin-left: -80px; /* Ajustando o margin-left para abrir para a esquerda */
     transition: 1s;
 }
 
@@ -296,51 +298,12 @@ a {
 }
 @media screen and (max-width: 500px) {
     .whatsapp {
-        position: fixed;
-        bottom: 5%;
-        right: 5%;
-        z-index: 999;
-        background: none;
+        left: 84%;
     }
-    
-    .divwhatsapp {
-        display: flex;
-        align-items: center;
-        background: #40c351;
-        width: 10%;
-        height: 10%;
-        padding: 2%;
-        border-radius: 50%;
-        transition: width 0.3s ease, height 0.3s ease, margin-left 1s ease;
-    }
-    
-    .divwhatsapp img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-    }
-    
-    .divwhatsapp p {
-        visibility: hidden;
-        margin-left: 5%;
-        color: #ffffff;
-        text-decoration: none;
-        list-style: none;
-    }
-    
-    a {
-        text-decoration: none;
-    }
-    
-    .divwhatsapp:hover {
-        background: #40c351;
-        width: 30%;
-        height: 10%;
-        border-radius: 50%;
-        margin-left: -15%;
-    }
-    
-    .divwhatsapp:hover p {
-        visibility: visible;
+}
+
+@media screen and (max-width: 400px) {
+    .whatsapp {
+        left: 82%;
     }
 }

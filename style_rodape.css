@@ -1,4 +1,13 @@
 .main_footer {
+    color: white !important;
+}
+
+.main_footer > a {
+    color: white;
+    text-decoration: none;
+}
+
+.main_footer {
     font-family: Helvetica, sans-serif;
     height: 30vh;
     display: flex;
