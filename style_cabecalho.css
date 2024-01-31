@@ -174,10 +174,6 @@ ul.caixa-bandeiras-ativa {
         transform: translateX(0);
     }
 
-    a {
-        font-size: 2em;
-    }
-
     nav > ul {
         display: flex;
         flex-direction: column;
