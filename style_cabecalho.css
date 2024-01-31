@@ -297,34 +297,34 @@ a {
 @media screen and (max-width: 500px) {
     .whatsapp {
         position: fixed;
-        top: 90vh; 
-        left: 80%;
+        bottom: 5%;
+        right: 5%;
         z-index: 999;
         background: none;
     }
     
     .divwhatsapp {
-        display: flex; /* Adicionando flexbox para alinhar itens lado a lado */
-        align-items: center; /* Centralizando verticalmente os itens */
+        display: flex;
+        align-items: center;
         background: #40c351;
-        width:10%; 
-        height: 5vh; 
-        padding: 2vw;
+        width: 10%;
+        height: 10%;
+        padding: 2%;
         border-radius: 50%;
-        transition: width 0.3s ease; /* Alterando a propriedade da transição para width */
+        transition: width 0.3s ease, height 0.3s ease, margin-left 1s ease;
     }
+    
     .divwhatsapp img {
-        display: block; /* Remova o display: flex */
-        margin: 0 auto; /* Adicione esta linha para centralizar horizontalmente */
-        max-width: 100%; /* Adicione esta linha para garantir que a imagem não ultrapasse a largura da div */
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
     }
     
     .divwhatsapp p {
         visibility: hidden;
-        margin-left: 2%; /* Ajuste o espaçamento conforme necessário */
+        margin-left: 5%;
         color: #ffffff;
         text-decoration: none;
-        text-underline-offset: none;
         list-style: none;
     }
     
@@ -334,19 +334,15 @@ a {
     
     .divwhatsapp:hover {
         background: #40c351;
-        width: 40%; 
-        height: 7vh; 
-        border-radius: 100px;
-        margin-left: -25%; /* Ajustando o margin-left para abrir para a esquerda */
-        transition: 1s;
+        width: 30%;
+        height: 10%;
+        border-radius: 50%;
+        margin-left: -15%;
     }
     
     .divwhatsapp:hover p {
         visibility: visible;
-        
-        list-style: none;
     }
-}
 
 @media screen and (max-width: 400px) {
     .whatsapp {
@@ -397,7 +393,6 @@ a {
     
     .divwhatsapp:hover p {
         visibility: visible;
-        
         list-style: none;
     }
 }
