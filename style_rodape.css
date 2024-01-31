@@ -42,12 +42,6 @@
     font-size: 5vh;
 }
 
-.contat h3, h3:visited, h3:hover, h3:active {
-    color: indianred;
-    text-decoration: none;
-
-}
-
 .boximg {
     display: flex;
     align-items: center;

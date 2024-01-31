@@ -196,36 +196,34 @@ ul.caixa-bandeiras-ativa {
     }
 }
 
-
-
-
 .whatsapp {
     position: fixed;
-    top: 88vh; 
+    top: 88vh;
     left: 95%;
     z-index: 999;
     background: none;
 }
 
 .divwhatsapp {
-    display: flex; /* Adicionando flexbox para alinhar itens lado a lado */
-    align-items: center; /* Centralizando verticalmente os itens */
+    display: flex;
+    align-items: center;
     background: #40c351;
-    width: 50px; 
-    height: 50px; 
-    padding: 5px;
-    border-radius: 100px;
-    transition: width 0.3s ease; /* Alterando a propriedade da transição para width */
+    width: 10vw;
+    height: 10vw;
+    padding: 1vw;
+    border-radius: 50%;
+    transition: width 0.3s ease;
 }
+
 .divwhatsapp img {
-    display: block; /* Remova o display: flex */
-    margin: 0 auto; /* Adicione esta linha para centralizar horizontalmente */
-    max-width: 100%; /* Adicione esta linha para garantir que a imagem não ultrapasse a largura da div */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .divwhatsapp p {
     visibility: hidden;
-    margin-left: 10px; /* Ajuste o espaçamento conforme necessário */
+    margin-left: 1vw;
     color: #ffffff;
     text-decoration: none;
     text-underline-offset: none;
@@ -238,18 +236,19 @@ a {
 
 .divwhatsapp:hover {
     background: #40c351;
-    width: 140px; 
-    height: 7vh; 
-    border-radius: 100px;
-    margin-left: -80px; /* Ajustando o margin-left para abrir para a esquerda */
+    width: 20vw;
+    height: 5vh;
+    border-radius: 50%;
+    margin-left: -10vw;
     transition: 1s;
 }
 
 .divwhatsapp:hover p {
     visibility: visible;
-    
-    list-style: none;
 }
+
+
+
 
 
 @media screen and (max-width: 1400px) {
