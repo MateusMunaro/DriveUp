@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+body {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: #141414;
+}
+
+
+
+
+.first_main {
+    font-family: Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    background-image: url(img/img_main.avif);
+    background-size: cover;
+}
+
+.text_main {
+    margin-right: 55%;
+    background-color: #000000a4;
+}
+
+aside {
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: 32vh;
+    height: 25vh;
+    width: 75%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;    
+}
+
+aside > h1#titulo-corporativo {
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 3.6vh;
+}
+
+aside > p#texto-corporativo {
+    color: #ffffff;
+    font-size: 3vh;
+}
+
+aside h2 {
+    margin-top: 2vh;
+}
+
+.second_main {
+    font-family: Helvetica, sans-serif;
+    background-color: #1B2528;
+    color: #ffffff;
+    height: 110vh;
+    
+}
+
+.top_secondmain{
+    display: flex;
+    padding: 5vh; 
+}
+
+article {
+    text-align: center;
+    font-size: 3vh;
+}
+
+.texto_secondmain {
+    width: 73%;
+    margin-top: 2vh;
+    margin-left: 12%;
+}
+
+.columns_main {
+    margin-top: 20vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 4rem, 3.5rem;
+    text-align: center;
+    align-items: flex-start;
+    font-size: 3vh;
+    margin-left: 7%;
+   
+}
+
+.columns_main h1 {
+    margin-top: 4vh;
+}
+
+.columns_main p {
+    margin-top: 15px;
+}
+
+.columns {
+    height: 45vh;
+    width: 75%;
+}
+
+.third_main {
+    font-family: Helvetica, sans-serif;
+    background-color: #1B2528;
+    color: white;
+    height: 100vh;
+}
+
+.third_columns {
+    display: flex;
+    align-items: center;
+    margin-top: 30vh;
+    margin-left: 13%;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 90%; /* Ajuste o tamanho do contêiner conforme necessário */
+    height: 50vh;
+}
+
+.parceiros {
+    list-style: none;
+    display: flex;
+    transition: transform 1s ease; /* A transição agora é aplicada ao container */
+}
+
+.card {
+    flex: 0 0 30%; /* Ajuste o tamanho dos cards conforme necessário */
+    margin-right: 2%; /* Espaçamento entre os cards */
+    transition: transform 1s ease; /* Adicionada transição para a entrada/saída do card */
+}
+
+.parceiros img {
+    height: auto;
+    width: 100%;
+}
+
+/*responsividade first main*/
+@media (max-width: 1150px) {
+    .first_main {
+        color: white;
+        display: flex;
+        text-align: center;
+        height: 100vh;
+        background-image: url(img/img_main.avif);
+        background-size: cover;
+    }
+    
+    .text_main {
+        margin-right: 45%; 
+    }
+    
+    aside {
+        margin-left: 10%;
+        margin-right: 5%;
+        margin-top: 32vh;
+        height: 25vh;
+        width: 75%;
+        font-size: 3.5vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    aside h3 {
+        margin-top: 2vh;
+    }
+}
+
+@media (max-width: 850px) {
+    .first_main {
+        color: white;
+        display: flex;
+        text-align: center;
+        height: 100vh;
+        background-image: url(img/img_main.avif);
+        background-size: cover;
+    }
+    
+    .text_main {
+        margin-right: 38%;
+    }
+    
+    aside {
+        margin-left: 1%;
+        margin-right: 2%;
+        margin-top: 32vh;
+        height: 25vh;
+        width: 100%;
+        font-size: 3vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    aside h3 {
+        margin-top: 2vh;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .first_main {
+        color: white;
+        display: flex;
+        text-align: center;
+        height: 100vh;
+        background-image: url(img/img_main.avif);
+        background-size: cover;
+    }
+    
+    .text_main {
+        margin-right: 0%;
+    }
+    
+    aside {
+        margin-left: 1%;
+        margin-right: 2%;
+        margin-top: 32vh;
+        height: 25vh;
+        width: 100%;
+        font-size: 3vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    aside h3 {
+        margin-top: 2vh;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .first_main {
+        color: white;
+        display: flex;
+        text-align: center;
+        height: 100vh;
+        background-image: url(img/img_main.avif);
+        background-size: cover;
+    }
+    
+    .text_main {
+        margin-right: 0%;
+    }
+    
+    aside {
+        margin-left: 1%;
+        margin-right: 2%;
+        margin-top: 32vh;
+        height: 25vh;
+        width: 97%;
+        font-size: 2vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center;    
+    }
+    
+    aside h3 {
+        margin-top: 2vh;
+    }
+
+}
+
+/*responsividade second main */
+@media (max-width: 1150px) {
+    .second_main {
+        background-color: #1B2528;
+        color: white;
+        height: 150vh;
+        
+    }
+    
+    .top_secondmain{
+        display: flex;
+        padding: 5vh; 
+    }
+    
+    article {
+        text-align: center;
+        font-size: 3vh;
+    }
+    
+    .columns_main {
+        margin-top: 20vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 4rem, 3.5rem;
+        text-align: center;
+        align-items: flex-start;
+        font-size: 3vh;
+        margin-left: 7%;
+       
+    }
+    
+    .columns_main h1 {
+        margin-top: 4vh;
+    }
+    
+    .columns_main p {
+        margin-top: 15px;
+    }
+    
+    .columns {
+        height: 45vh;
+        width: 75%;
+    }
+}
+
+@media (max-width: 850px) {
+    .second_main {
+        background-color: #1B2528;
+        color: white;
+        height: 150vh;
+        
+    }
+    
+    .top_secondmain{
+        display: flex;
+        padding: 5vh; 
+    }
+    
+    article {
+        margin-left: 2%;
+        width: 95%;
+        font-size: 2vh;
+        text-align: center;
+    }
+    
+    .columns_main {
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        gap: 12vh;
+        text-align: center;
+        align-items: flex-start;
+        font-size: 2.5vh;
+        margin-left: 16%;
+       
+    }
+    
+    .columns_main h1 {
+        margin-top: 1vh;
+    }
+    
+    .columns_main p {
+        margin-top: 1vh;
+    }
+    
+    .columns {
+        height: 20vh;
+        width: 80%;
+    }
+    
+    
+
+}
+
+@media (max-width: 650px) {
+    .second_main {
+        background-color: #1B2528;
+        color: white;
+        height: 150vh;
+        
+    }
+    
+    .top_secondmain{
+        display: flex;
+        padding: 5vh; 
+    }
+    
+    article {
+        margin-left: 2%;
+        width: 95%;
+        font-size: 2vh;
+        text-align: center;
+    }
+    
+    .columns_main {
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        text-align: center;
+        align-items: flex-start;
+        font-size: 2vh;
+        margin-left: 17%;
+       
+    }
+    
+    .columns_main h1 {
+        margin-top: 1vh;
+    }
+    
+    .columns_main p {
+        margin-top: 1vh;
+    }
+    
+    .columns {
+        height: 20vh;
+        width: 80%;
+    }
+    
+    
+
+}
+
+@media (max-width: 600px) {
+    .second_main {
+        background-color: #1B2528;
+        color: white;
+        height: 110vh;
+        
+    }
+    
+    .top_secondmain{
+        display: flex;
+        padding: 5vh; 
+    }
+    
+    article {
+        width: 99%;
+        font-size: 1.8vh;
+        text-align: center;
+    }
+    
+    .columns_main {
+        margin-top: 2vh;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        text-align: center;
+        align-items: flex-start;
+        font-size: 2vh;
+        margin-left: 16.5%;
+       
+    }
+    
+    .columns_main h1 {
+        margin-top: 1vh;
+    }
+    
+    .columns_main p {
+        margin-top: 15px;
+    }
+    
+    .columns {
+        height: 15vh;
+        width: 80%;
+    }
+    
+    
+
+}
+@media (max-width: 450px) {
+    .second_main {
+        background-color: #1B2528;
+        color: white;
+        height: 100vh;
+        
+    }
+    
+    .top_secondmain{
+        display: flex;
+        padding: 5vh; 
+    }
+    
+    article {
+        width: 95%;
+        font-size: 1.6vh;
+        text-align: center;
+        margin-left: 2.5%;
+    }
+    
+    .columns_main {
+        margin-top: 1.5vh;
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        text-align: center;
+        align-items: flex-start;
+        font-size: 1.6vh;
+        margin-left: 1%;
+       
+    }
+    
+    .columns_main h1 {
+        margin-top: 0.75vh;
+    }
+    
+    .columns_main p {
+        margin-top: 15px;
+    }
+    
+    .columns {
+        height: 15vh;
+        width: 100%;
+    }
+    
+    
+
+}
+
+
+/*responsividade third main*/
+@media (max-width: 600px) {
+    .third_main {
+        background-color: #1B2528;
+        color: white;
+        height: 70vh;
+    }
+    
+    .third_columns {
+        display: flex;
+        align-items: center;
+        margin-top: 30vh;
+        margin-left: 13%;
+    }
+    
+    .carousel-container {
+        overflow: hidden;
+        width: 90%; /* Ajuste o tamanho do contêiner conforme necessário */
+        height: 50vh;
+    }
+    
+    .parceiros {
+        list-style: none;
+        display: flex;
+        transition: transform 1s ease; /* A transição agora é aplicada ao container */
+    }
+    
+    .card {
+        flex: 0 0 30%; /* Ajuste o tamanho dos cards conforme necessário */
+        margin-right: 4%; /* Espaçamento entre os cards */
+        transition: transform 1s ease; /* Adicionada transição para a entrada/saída do card */
+    }
+    
+    .parceiros img {
+        height: auto;
+        width: 100%;
+    }
+    
+}

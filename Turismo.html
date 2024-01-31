@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveUp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/Lgoo_DriveUp_32x10.png" type="image/x-icon"> <!--Ícone do site.-->
+    <link rel="stylesheet" href="style_turismo.css">
+    <link rel="stylesheet" href="style_cabecalho.css">
+    <link rel="stylesheet" href="style_rodape.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;1,300&family=Quintessential&family=Titillium+Web:wght@300;400&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <picture>
+            <source srcset="img/DriveUp_Oficial150.webp" media="(max-device-width: 480px)" />
+            <source srcset="img/DriveUp_Oficial120.webp" media="(max-width: 700px)" />
+            <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 850px)" />
+            <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">
+        </picture>
+        <nav>
+            <ul>
+                <li><a id="pagina-inicio" href="index.html">Início</a></li>
+                <li><a id="pagina-corporativo" href="corporativo.html">Corporativo</a></li>
+                <li><a id="pagina-turismo" href="Turismo.html">Turismo</a></li>
+                <button class="idioma" onclick="menuIdiomas()">
+                    <ul class="caixa-bandeiras">
+                        <li class="li-bandeiras1">
+                            <picture>
+                                <source srcset="img/flag_en20.png" media="(max-width: 600px)" alt="bandeira EUA."/>
+                                <source srcset="img/flag_en25.png" media="(max-width: 850px)" alt="bandeira EUA."/>
+                                <img id="bandeira-eua" class="bandeira-eua" onclick="mudarIdioma('ingles')" src="img/flag_en35.png" alt="Bandeira EUA">
+                            </picture>
+                        </li>
+                        <li class="li-bandeiras">
+                            <picture>
+                                <source srcset="img/flag_br20.jpg" media="(max-width: 600px)" alt="Bandeira do Brasil."/>
+                                <source srcset="img/flag_br25.jpg" media="(max-width: 850px)" alt="Bandeira do Brasil."/>
+                                <img id="bandeira-brasil" class="escondido" onclick="mudarIdioma('portugues')" src="img/flag_br35.jpg" alt="Bandeira do Brasil.">
+                            </picture>
+                        </li>
+                        <li class="li-bandeiras">
+                            <picture>
+                                <source srcset="img/flag_esp20.png" media="(max-width: 600px)" alt="Bandeira da Espanha."/>
+                                <source srcset="img/flag_esp25.png" media="(max-width: 850px)" alt="Bandeira da Espanha."/>
+                                <img id="bandeira-espanha" class="escondido" onclick="mudarIdioma('espanhol')" src="img/flag_esp35.png" alt="Bandeira da Espanha.">
+                            </picture>
+                        </li>
+                    </ul>
+                </button>
+            </ul>
+        </nav>
+        <img class="icone-menu" src="img/menu_icon.svg" alt="Ícone do menu">
+    </header>
+    <main>
+        <section class="whatsapp">
+            <a id="linkwhatsapp" href="https://bit.ly/47FHAut" target="_blank">
+                <div class="divwhatsapp">
+
+                    <img
+                        src="data:image/png;base64,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">
+
+                    <p id="entre-em-contato-whats">Entre em contato</p>
+                </div>
+            </a>
+            </div>
+        </section>
+        <section class="turismo">
+            <div>
+                <h1 id="turismo-titulo">TURISMO</h1>
+                <p id="turismo-texto">Viaje conosco e descubra o melhor do turismo com qualidade e dedicação.</p>
+            </div>
+        </section>
+        <section class="destinos">
+            <h2 id="destinos-titulo">Destinos</h2>
+            <div class="caixa-cards">
+                <div class="flip-container" onmouseover="handleHover()">    <!-- Card 1-->
+                    <div class="front">
+                        <picture>
+                            <source srcset="img/card-gramado-mobile.jpg" media="(max-width: 600px)" alt="Cidade de Gramado."/>
+                            <source srcset="img/card-gramado240.jpg" media="(max-width: 1000px)" alt="Cidade de Gramado." />
+                            <img class="cardflip" src="img/card-gramado280.jpg" alt="Cidade de Gramado.">
+                        </picture>
+                    </div>
+                    <div class="back">
+                      <h3>Gramado</h3>
+                      <p id="gramado-texto1">
+                        Gramado é um charmoso refúgio cercado por paisagens deslumbrantes. 
+                        Com suas ruas floridas e arquitetura europeia, encanta com seu 
+                        clima acolhedor e gastronomia irresistível. 
+                      </p>
+                      <p id="gramado-texto2">
+                        passeios personalizados com duração entre 10 e 12 
+                        horas, saindo de Porto Alegre. Possuímos parceria com os hotéis mais renomados da cidade.
+                      </p>
+                    </div>
+                </div>
+                <div class="flip-container">    <!-- Card 2-->
+                    <div class="front">
+                        <picture>
+                            <source srcset="img/card-torres-mobile.webp" media="(max-width: 600px)" alt="Praia de Torres"/>
+                            <source srcset="img/card-torres240.webp" media="(max-width: 1000px)" alt="Praia de Torres"/>
+                            <img class="cardflip" src="img/card-torres280.webp" alt="Praia de Torres">
+                        </picture>
+                    </div>
+                    <div class="back">
+                      <h3>Torres</h3>  
+                      <p id="torres-texto1">
+                        Torres é conhecida por suas belas praias, sendo um destino turístico popular na região sul do Brasil. A praia de Torres é famosa pelos seus morros e pela formação rochosa conhecida como "Morro do Farol".  
+                      </p>
+                      <p id="torres-texto2">
+                        É um destino encantador para quem busca contemplar 
+                        a grandiosidade da natureza.
+                      </p>
+                    </div>
+                </div>
+                <div class="flip-container">    <!-- Card 3-->
+                    <div class="front">
+                        <picture>
+                            <source srcset="img/card-poa-mobile.jpg" media="(max-width: 600px)" alt="Foto de uma igreja de Porto Alegre."/>
+                            <source srcset="img/card-poa240.jpg" media="(max-width: 1000px)" alt="Foto de uma igreja de Porto Alegre."/>
+                            <img class="cardflip" src="img/card-poa280.jpg" alt="Foto de uma igreja de Porto Alegre.">
+                        </picture>
+                    </div>
+                    <div class="back">
+                        <h3>Porto Alegre</h3>
+                      <p id="porto-alegre-texto1">
+                        O City Tour da DriveUp é bastante diferente do 
+                        convencional pois a quantidade de informações históricas, 
+                        culturais e curiosidades fazem a diferença.
+                      </p>
+                      <p id="porto-alegre-texto2">
+                        Possuímos City Tours de 2 horas e de 4 horas, 
+                        mas personalizamos tempo e trajetos de acordo com as 
+                        necessidades dos clientes.
+                      </p>
+                    </div>
+                </div>
+                <div class="flip-container">    <!-- Card 4-->
+                    <div class="front">
+                        <picture>
+                            <source srcset="img/card-cambara-mobile.jpg" media="(max-width: 600px)" alt="Canyon de Cambará"/>
+                            <source srcset="img/card-cambara240.jpg" media="(max-width: 1000px)" alt="Canyon de Cambará"/>
+                            <img class="cardflip" src="img/card-cambara280.jpg" alt="Canyon de Cambará">
+                        </picture>
+                    </div>
+                    <div class="back">
+                      <h3>Cambará</h3> 
+                      <p id="cambara-texto1">
+                        Cambará, no Rio Grande do Sul, encanta com suas paisagens montanhosas e rios serenos. 
+                        A Cascata da Pedra Furada e o Canyon Itaimbezinho são tesouros naturais 
+                        que hipnotizam os visitantes.
+                      </p>
+                      <p id="cambara-texto2">
+                        Nessa cidade acolhedora, a cultura gaúcha e a hospitalidade local se 
+                        unem para proporcionar uma experiência autêntica e memorável.
+                      </p>
+                    </div>
+                </div>
+                <div class="flip-container">    <!-- Card 5-->
+                    <div class="front">
+                        <picture>
+                            <source srcset="img/card-bentogonçalves-mobile.jpg" media="(max-width: 600px)" alt="Vinícula de Bento Gonçalves."/>
+                            <source srcset="img/card-bentogonçalves240.jpg" media="(max-width: 1000px)" alt="Vinícula de Bento Gonçalves."/>
+                            <img class="cardflip" src="img/card-bentogonçalves280.jpg" alt="Vinícula de Bento Gonçalves.">
+                        </picture>
+                    </div>
+                    <div class="back">
+                      <h3>Bento Gonçalves</h3> 
+                      <p id="bento-goncalves-texto1">
+                        Conheça a região que produz a maior parte dos vinhos 
+                        finos e espumantes do Brasil. Visitamos as principais 
+                        vinícolas, o hotel Spa do Vinho, o tour da Miolo e com 
+                        um almoço italiano de alta qualidade dentro da 
+                        Vinícola Valduga.
+                      </p>
+                      <p id="bento-goncalves-texto2">
+                        Também visitamos os Caminhos de Pedra, berço da 
+                        colonização italiana no Brasil e onde foram filmados 
+                        diversos longas, mini séries e novelas.
+                      </p>
+                    </div>
+                </div>
+                <div class="flip-container">    <!-- Card 6-->
+                    <div class="front">
+                        <picture>
+                            <source srcset="img/card-canela-mobile.jpg" media="(max-width: 600px)" alt="Catedral de Pedra de Canela."/>
+                            <source srcset="img/card-canela240.jpg" media="(max-width: 1000px)" alt="Catedral de Pedra de Canela."/>
+                            <img class="cardflip" src="img/card-canela280.jpg" alt="Catedral de Pedra de Canela.">
+                        </picture>
+                    </div>
+                    <div class="back">
+                      <h3>Canela</h3>  
+                      <p id="canela-texto1">
+                        Canela, no Rio Grande do Sul, é um tesouro entre as serras gaúchas. Com seus cenários 
+                        exuberantes, como a Catedral de Pedra e o Parque do Caracol, oferece uma imersão na 
+                        natureza e arquitetura encantadora. 
+                      </p>
+                      <p id="canela-texto2">
+                        Seu clima aconchegante e a mistura de tradição e modernidade a tornam um destino 
+                        imperdível para quem busca encanto e beleza no sul do Brasil.
+                      </p>
+                    </div>
+                </div>
+                <div class="flip-container">    <!-- Card 7-->
+                    <div class="front">
+                        <picture>
+                            <source srcset="img/card-Universal-mobile.webp" media="(max-width: 600px)" alt="Parque Universal"/>
+                            <source srcset="img/card-Universal240.webp" media="(max-width: 1000px)" alt="Parque Universal"/>
+                            <img class="cardflip" src="img/card-universal280.webp" alt="Parque Universal">
+                        </picture>
+                    </div>
+                    <div class="back">
+                      <h3>Universal</h3>  
+                      <p id="universal-texto">
+                        O Universal Orlando Resort, localizado na Flórida, é um complexo de entretenimento que abriga dois parques temáticos principais: Universal Studios Florida e Universal's Islands of Adventure. Fundado na década de 1990, o resort oferece uma experiência imersiva com atrações emocionantes, shows espetaculares e personagens icônicos dos filmes e programas de televisão da Universal.
+                      </p>
+                    </div>
+                </div>
+                <div class="flip-container">    <!-- Card 8-->
+                    <div class="front">
+                        <picture>
+                            <source srcset="img/DriveUpIMG/card-disney-mobile.jpeg" media="(max-width: 600px)" alt="Disney World"/>
+                            <source srcset="img/DriveUpIMG/card-disney240.jpeg" media="(max-width: 1000px)" alt="Disney World"/>
+                            <img class="cardflip" src="img/DriveUpIMG/card-disney280.jpeg" alt="Disney World.">
+                        </picture>
+                    </div>
+                    <div class="back">
+                      <h3>Disney</h3>  
+                      <p id="disney-texto1">
+                        O Walt Disney World Resort em Orlando, Flórida, é o maior e mais abrangente complexo de parques temáticos da Disney no mundo. 
+                      </p>
+                      <p id="disney-texto2">
+                        Inaugurado em 1971, o resort abrange uma vasta área e oferece uma variedade de experiências mágicas para visitantes de todas as idades.
+                      </p>
+                    </div>
+                </div>
+                <div class="flip-container">    <!-- Card 9-->
+                    <div class="front">
+                        <picture>
+                            <source srcset="img/card-miami-mobile.jpg" media="(max-width: 600px)" alt="Cidade de Miami"/>
+                            <source srcset="img/card-miami240.jpg" media="(max-width: 1000px)" alt="Cidade de Miami"/>
+                            <img class="cardflip" src="img/card-miami280.jpg" alt="Cidade de Miami">
+                        </picture>
+                    </div>
+                    <div class="back">
+                      <h3>Miami</h3>  
+                      <p id="miami-texto">
+                        Miami é uma cidade localizada no sudeste do estado da Flórida, nos Estados Unidos. Conhecida por sua atmosfera vibrante, diversidade cultural e suas praias deslumbrantes, Miami é uma metrópole internacionalmente reconhecida. 
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main_footer">
+        <div class="footeer_content">
+            <div class="all_footer">
+                <div class="contat">
+                    <h1 id="endereco-titulo">Endereço</h1>
+                    <h3 id="endereco-texto">Rua: Olavo Barreto Viana, 18 - Moinhos de Vento</h3>
+                    <h3>CEP : 90570-070</h3>
+                </div>
+                <div class="contat">
+                    <h1 id="contato-titulo">Contato</h1>
+                    <h3 id="contato-texto">Fone: +55 (51) 9620-0409</h3>
+                    <h3 id="contato-texto2">Fone: +1 (689) 837-9863</h3>
+                    <h3>Contract@driveup.com.br</h3>
+                </div>
+                <div class="contat">
+                    <h1 id="siga-nos-titulo">Siga-nos</h1>
+                    <ul class="footer_lks">
+                        <a target="_blank" href="https://www.instagram.com/driveupexecutive/" class="footer_link"
+                            id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/driveupexecutive/" class="footer_link"
+                            id="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a target="_blank" href="https://bit.ly/47FHAut" class="footer_link" id="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="boximg">
+                <div class="imgfooter">
+                    <picture>
+                        <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 400px)" alt="Logo DriveUp"/>
+                        <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script_turismo.js"></script>
+    <script src="script_cabecalho_mobile.js"></script>
+</body>
+</html>

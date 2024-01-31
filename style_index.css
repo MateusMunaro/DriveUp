@@ -1,0 +1,584 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+/* Corpo da página de início(Freire). */
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: #141414;
+}
+
+.inicio {
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#slide1 {
+    background-image: url('./img/DriveUpIMG/foto_principal.jpeg');
+}
+
+#slide2 {
+    background-image: url('./img/DriveUpIMG/carro2.jpg');
+}
+
+#slide3 {
+    background-image: url('./img/DriveUpIMG/carroEUA.png');
+}
+
+.inicio button {
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.inicio button > a {
+    color: white;
+}
+
+.inicio button:hover {
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 650px) {
+    .inicio button {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+    .inicio {
+        height: 77vh;
+    }
+    #slide1 {
+        background-image: url('./img/DriveUpIMG/imagem_celular.jpg');
+    }
+    
+    #slide2 {
+        background-image: url('./img/DriveUpIMG/imagem_celular2.jpg');
+    }
+    
+    #slide3 {
+        background-image: url('./img/DriveUpIMG/carroEUA.png');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.somos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    height: 60vh;
+    background: url('./img/fundosomos.png') center/cover no-repeat;
+    color: #fff;
+    width: 100%;
+}
+
+.textos {
+    max-width: 40%;
+}
+
+.somos h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.somos p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.somos button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para telas menores (altere os valores conforme necessário) */
+@media screen and (max-width: 768px) {
+    .textos {
+        max-width: 60%; /* Ajuste conforme necessário */
+    }
+
+    .somos h2 {
+        font-size: 1.5em; /* Ajuste conforme necessário */
+    }
+
+    .somos p {
+        font-size: 1em; /* Ajuste conforme necessário */
+    }
+
+    .somos button {
+        font-size: 0.8em; /* Ajuste conforme necessário */
+    }
+}
+
+
+
+
+/* Estilos iniciais */
+.parceiros {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    background-color: #1B2528;
+}
+
+.parceiro {
+    position: relative;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #1B2528; /* Cor de fundo inicial */
+    transition: visibility 0.3s, opacity 0.3s, transform 0.5s ease-in-out; 
+   
+}
+
+.flip-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #1B2528;
+}
+
+.parceiro img {
+    width: auto;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.parceiro1 img {
+    width: auto;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.parceiro5 img {
+    width: auto;
+    height: 40%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos específicos para cada parceiro */
+.parceiro1 {
+    background: url(./img/art_hotel.jpg) center/cover no-repeat;
+}
+
+.parceiro2 {
+    background: url(./img/hotel_casa_da_montanha.webp) center/cover no-repeat;
+}
+
+.parceiro3 {
+    background: url(./img/fundohilton.jpg) center/cover no-repeat;
+}
+
+.parceiro4 {
+    background: url(./img/fundoDoubleTree.jpg) center/cover no-repeat;
+}
+
+.parceiro5 {
+    background: url(./img/fundoparkplaza.jpg) center/cover no-repeat;
+}
+
+/* Estilos para os textos */
+.parceiro p {
+    position: absolute;
+    top: 60vh;
+    bottom: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s, ease-in-out 0.5s, background-color 0.5s;
+    background: rgba(0, 0, 0, 0.3); /* Cor da parte branca */
+}
+
+/* Exibir o texto quando o mouse está sobre a div parceiro */
+.parceiro:hover p {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.8s;
+}
+
+/* Estilos base da div parceiro */
+.parceiro {
+    width: 20%;
+    background-color: #000000;
+    transition: 0.8s, ease-in-out 0.8s;
+}
+
+/* Estilos quando o mouse está sobre a div parceiro */
+.parceiro:hover {
+    width: 40%;
+    background-color: #1B2528;
+}
+
+/* Estilos para as outras divs quando o mouse está sobre uma delas */
+.parceiro:hover~.parceiro {
+    width: 15%;
+    transition: 2s;
+}
+
+/* Cor de fundo das outras divs ao aumentar */
+.parceiro:hover~.parceiro {
+    background-color: #1B2528;
+}
+
+/* Media query para ajustar imagens em telas menores */
+@media (max-width: 1150px) {
+    .parceiro img {
+        height: 60px; /* Ajuste a altura conforme necessário para telas menores */
+    }
+    .parceiro {
+        height: 100vh;
+    }
+    .parceiro p {
+        padding: 1px;
+        top: 45vh;
+        bottom: 10px;
+    }
+
+}
+@media (max-width: 850px) {
+    .parceiro img {
+        height: 60px; /* Ajuste a altura conforme necessário para telas menores */
+    }
+    .parceiro {
+        height: 100vh;
+    }
+    .parceiro p {
+        padding: 1px;
+        top: 45vh;
+        bottom: 10px;
+    }
+
+}
+@media (max-width: 650px) {
+    .parceiro img {
+        height: 60px; /* Ajuste a altura conforme necessário para telas menores */
+    }
+    .parceiro {
+        height: 100vh;
+    }
+    .parceiro p {
+        padding: 1px;
+        top: 45vh;
+        bottom: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .parceiro img {
+        height: 60px; /* Ajuste a altura conforme necessário para telas menores */
+    }
+    .parceiro {
+        height: 100vh;
+    }
+    .parceiro p {
+        padding: 1px;
+        top: 45vh;
+        bottom: 10px;
+    }
+
+
+}
+
+@media (max-width: 450px) {
+    .parceiros {    /* seção dos parceiros(box que engloba todos os hoteis. */
+        display: flex;
+        flex-direction: column;
+        height: 150vh;
+        width: 100%;
+        background-color: #1B2528;
+    }
+    
+    .parceiro {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: visibility 0.3s, opacity 0.3s, transform 0.5s ease-in-out; 
+       
+    }
+    
+    .parceiro img {
+        visibility: visible;
+        width: 100px;
+        height: 100px;
+    }
+    .parceiro1 img {
+        width: 10%;
+        height: 200px;
+    }
+    
+    .parceiro5 img {
+        width: auto;
+        height: 200px;
+    }
+    
+    /* Estilos específicos para cada parceiro */
+    .parceiro1 {
+        background: url(./img/art_hotel.jpg) center/cover no-repeat;
+    }
+    
+    .parceiro2 {
+        background: url(./img/hotel_casa_da_montanha.webp) center/cover no-repeat;
+    }
+    
+    .parceiro3 {
+        background: url(./img/fundohilton.jpg) center/cover no-repeat;
+    }
+    
+    .parceiro4 {
+        background: url(./img/fundoDoubleTree.jpg) center/cover no-repeat;
+    }
+    
+    .parceiro5 {
+        background: url(./img/fundoparkplaza.jpg) center/cover no-repeat;
+    }
+    
+    /* Estilos para os textos */
+    .parceiro p {
+        position: absolute;
+        top: 1vh;
+        bottom: 10px;
+        margin-left: 10%;
+        width: 80%;
+        padding: 10px;
+        font-size: 0.8em;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s, opacity 0.3s, ease-in-out 0.5s, background-color 0.5s;
+        background: rgba(0, 0, 0, 0.70); /* Cor da parte branca */
+    }
+    
+    /* Exibir o texto quando o mouse está sobre a div parceiro */
+    .parceiro:hover p {
+        visibility: visible;
+        opacity: 1;
+        height: 25vh;
+        transition-delay: 0.8s;
+    }
+
+    .parceiro:hover img {
+        visibility: hidden;
+        transition: 0.6s;
+    }
+    
+    /* Estilos base da div parceiro */
+    .parceiro {
+        width: 100%;
+        height: 100vh;
+        background-color: #000000;
+        transition: 0.8s, ease-in-out 0.8s;
+        transform-origin: center;
+        max-width: 100%;
+    }
+    
+    /* Estilos quando o mouse está sobre a div parceiro */
+    .parceiro:hover {
+        width: 100%;
+        background-color: #1B2528;
+        transform: scaleY(1.1);
+    }
+
+    .parceiros:hover .parceiro {
+        flex-grow: 0,5;
+        width: 100%;
+    }
+}
+
+
+
+
+
+.frota {
+    background: url(./img/Fundo_Drive_Up_Site.png) center/cover no-repeat;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0vh;
+}
+
+
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flip-container {
+    width: 20%;
+    height: 60vh;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+.flipper {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    height: 100%;
+}
+
+
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #007bff;
+}
+
+.front h4, .back h4 {
+    color: white;
+}
+
+.frota img {
+    height: auto;
+    width: 100%;
+ 
+}
+
+
+
+.frota h3 {
+    padding-top: 2%;
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 40px;
+    background: linear-gradient( #007bff, #141414);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.frota h4 {
+    margin-bottom: 5%;
+    font-size: 40px;
+}
+.frota p {
+    margin-bottom: 15%;
+    color: #fff;
+    font-size: 1.4em;
+}
+.hidden {
+    visibility: hidden;
+}
+/* Adicione media queries para tornar o layout responsivo */
+@media only screen and (max-width: 768px) {
+    .flip-container {
+        width: 30%;
+        height: 50vh;
+    }
+
+    .frota h3 {
+        font-size: 30px;
+    }
+
+    .front h4 {
+        font-size: 30px;
+    }
+    .frota p {
+        margin-bottom: 15%;
+        color: #fff;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .frota {
+        margin-top: 0;
+        height: 60vh;
+    }
+    
+    .flip-container {
+        width: 30%;
+        height: 40vh;
+    }
+
+    .frota h3 {
+        font-size: 40px;
+    }
+
+    .front h4 {
+        font-size: 20px;
+    }
+    .frota p {
+        margin-bottom: 15%;
+        color: #fff;
+        font-size: 0.9em;
+    }
+}
+
+
+.parceiros img {
+    margin-top: 0vh;
+    width: 25vh;
+}

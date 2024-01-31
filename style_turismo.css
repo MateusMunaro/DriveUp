@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: #141414;
+}
+
+.whatsapp {
+    position: fixed;
+    top: 88vh; 
+    left: 95%;
+    z-index: 999;
+    background: none;
+}
+
+.divwhatsapp {
+    display: flex; /* Adicionando flexbox para alinhar itens lado a lado */
+    align-items: center; /* Centralizando verticalmente os itens */
+    background: #40c351;
+    width: 50px; 
+    height: 50px; 
+    padding: 5px;
+    border-radius: 100px;
+    transition: width 0.3s ease; /* Alterando a propriedade da transição para width */
+}
+.divwhatsapp img {
+    display: block; /* Remova o display: flex */
+    margin: 0 auto; /* Adicione esta linha para centralizar horizontalmente */
+    max-width: 100%; /* Adicione esta linha para garantir que a imagem não ultrapasse a largura da div */
+}
+
+.divwhatsapp p {
+    visibility: hidden;
+    margin-left: 10px; /* Ajuste o espaçamento conforme necessário */
+    color: #ffffff;
+    text-decoration: none;
+    text-underline-offset: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.divwhatsapp:hover {
+    background: #40c351;
+    width: 140px; 
+    height: 7vh; 
+    border-radius: 100px;
+    margin-left: -140px; /* Ajustando o margin-left para abrir para a esquerda */
+    transition: 1s;
+}
+
+.divwhatsapp:hover p {
+    visibility: visible;
+    
+    list-style: none;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .whatsapp {
+        position: fixed;
+        top: 88vh; 
+        left: 92%;
+        z-index: 999;
+        background: none;
+    }
+}
+@media screen and (max-width: 900px) {
+    .whatsapp {
+        position: fixed;
+        top: 88vh; 
+        left: 90%;
+        z-index: 999;
+        background: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .whatsapp {
+        position: fixed;
+        top: 88vh; 
+        left: 85%;
+        z-index: 999;
+        background: none;
+    }
+}
+@media screen and (max-width: 620px) {
+    .whatsapp {
+        position: fixed;
+        top: 88vh; 
+        left: 85%;
+        z-index: 999;
+        background: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .whatsapp {
+        position: fixed;
+        top: 88vh; 
+        left: 80%;
+        z-index: 999;
+        background: none;
+    }
+}
+
+
+
+/* Corpo da página turismo. */
+section.turismo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100vh;
+    width: 100%;
+    background-image: url("img/DriveUpIMG/foto_turismo.jpeg");
+    background-size: cover;
+    font-size: 3.0vh;
+} 
+
+section.turismo > div {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 650px;
+    background-color: #0000006c;
+}
+
+section.turismo > div > h1 {
+    color: #ffffff;
+    width: 200px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: underline;
+}
+
+section.turismo > div > p {
+    color: #ffffff;
+    width: 400px;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Caixa dos cards de destino. */
+section.destinos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1200px;
+    width: 100%;
+    padding-bottom: 30px;
+    background-color: #1B2528;
+}
+
+section.destinos > h2 {
+    color: #ffffff;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+div.caixa-cards {   /* Div que engloba os cards. */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);      /* Define 3 colunas */
+    grid-auto-flow: dense;      /* Controla o fluxo dos itens */
+    gap: 10px;      /* Espaçamento entre os itens */
+    justify-content: center;
+    padding: 20px;
+}
+
+.flip-container {
+    height: 320px;
+    width: 280px;
+    transition: 0.7s;
+    transform-style: preserve-3d;
+    position: relative;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.flip-container:hover {
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    transition-delay: 0.4s;
+}
+  
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+img.cardflip {
+    border-radius: 20px;
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    transform: rotateY(180deg);
+    background-color: #ffffff;
+    text-align: justify;
+}
+
+/* Estilizando o texto/fundo da parte de trás dos cards. */
+.back h3 {
+    background-color: #07323f;
+    height: 30px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 18px 18px 0px 0px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.back p {
+    letter-spacing: -1px;
+    text-align: justify;
+    font-size: 1em;
+    padding: 0px 18px 0px 18px;
+    font-family: 'Titillium Web', sans-serif;
+}
+  
+
+/* Responsividade da seção destinos/cards para telas menores. */
+@media (max-width: 1000px) {
+    .flip-container {
+        height: 280px;
+        width: 240px;
+    }
+
+    .back p {
+        font-size: 0.9em;
+    }
+
+    div.caixa-cards {
+        grid-template-columns: repeat(3, 1fr); /* Define 2 colunas */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    section.destinos {
+        height: 1100px;
+    }
+}
+
+@media (max-width: 840px) {
+    div.caixa-cards {
+        grid-template-columns: repeat(2, 1fr); /* Define 2 colunas */
+        gap: 20px; /* Espaçamento entre os itens */
+    }
+
+    section.destinos {
+        height: 1670px;
+    }
+
+    .back p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 600px) {
+    section.destinos {
+        height: 2050px;
+    }
+
+    div.caixa-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .flip-container {
+        height: 188px;
+        width: 250px;
+    }
+
+    .back p {
+        font-size: 0.7em;
+    }
+}
+
+
+aside {
+    margin-left: 10vh;
+    margin-top: 32vh;
+    margin-right: 5vh;
+    height: 5vh;
+    width:80vh;
+    font-size: 3.8vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;    
+}
+
+aside #turismo-texto {
+    margin-top: 2vh;
+}
+
+.second_main {
+    background-color: #1B2528;
+    color: white;
+    height: 70vh;
+    
+}
+
+.top_secondmain{
+    display: flex;
+    padding: 5vh; 
+}
+
+article {
+    text-align: center;
+    font-size: 3vh;
+}
+
+.columns_main {
+    margin-top: 6vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 4rem, 3.5rem;
+    text-align: center;
+    align-items: flex-start;
+    font-size: 3vh;
+    margin-left: 19vh;
+   
+}
+
+.columns_main h1 {
+    margin-top: 4vh;
+}
+
+.columns_main p {
+    margin-top: 15px;
+}
+
+.columns {
+    height: 45vh;
+    width: 30vh;
+}
+
+.third_main {
+    background-color: #1B2528;
+    color: white;
+    height: 100vh;
+}
+
+.third_columns {
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem, 3.5rem;
+    text-align: center;
+    align-items: flex-start;
+    margin-left: 18vh;
+    margin-top: 20vh;
+}
+
+.parceiros {
+    width: 62%;
+    height: 40vh;
+    border-radius: 50px;
+    background: #e0e0e0;
+}
+
+.parceiros img {
+    margin-top: 9vh;
+    width: 28vh;
+}
+
+
+/* Responsividade do seção turismo. */
+
+@media (max-width: 600px) {
+    section.turismo > div {
+        height: 900px;
+        width: 420px;
+        background-image: url(img/DriveUpIMG/imagem_turismo_celular.jpeg);
+        background-size: cover;
+    }
+
+    section.turismo > div > h1 {
+        font-size: 1em;
+     }
+     
+     section.turismo > div > p {
+         font-size: 0.8em;
+     }
+}
+
+@media screen and (max-device-width: 400px) {
+    section.turismo > div {
+        height: 730px;
+        width: 400px;
+        background-image: url(img/DriveUpIMG/imagem_turismo_celular.jpeg);        
+        background-size: cover;
+    }
+    section.turismo > div > h1 {
+        font-size: 1.8em;
+        margin-left: 28%;
+    }
+     
+     section.turismo > div > p {
+         font-size: 1.1em;
+         width: 95%;
+         margin-left: 6%;
+    }
+}
+
+
+@media screen and (max-device-width: 300px) {
+    section.turismo > div {
+        background-image: url(img/DriveUpIMG/imagem_turismo_celular.jpeg);
+        background-size: cover;
+        height: 730px;
+        width: 280px;
+    }
+}

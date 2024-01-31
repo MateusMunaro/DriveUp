@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>DriveUp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="style_cabecalho.css">
+    <link rel="stylesheet" href="style_rodape.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;1,300&family=Quintessential&family=Titillium+Web:wght@300;400&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/Lgoo_DriveUp_32x10.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <picture>
+            <source srcset="img/DriveUp_Oficial150.webp" media="(max-device-width: 480px)" />
+            <source srcset="img/DriveUp_Oficial120.webp" media="(max-width: 700px)" />
+            <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 850px)" />
+            <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">
+        </picture>
+        <nav>
+            <ul>
+                <li><a id="pagina-inicio" href="index.html">Início</a></li>
+                <li><a id="pagina-corporativo" href="corporativo.html">Corporativo</a></li>
+                <li><a id="pagina-turismo" href="Turismo.html">Turismo</a></li>
+
+                <button class="idioma" onclick="menuIdiomas()">
+                    <ul class="caixa-bandeiras">
+                        <li class="li-bandeiras1">
+                            <picture>
+                                <source srcset="img/flag_en20.png" media="(max-width: 600px)" alt="bandeira EUA."/>
+                                <source srcset="img/flag_en25.png" media="(max-width: 850px)" alt="bandeira EUA."/>
+                                <img id="bandeira-eua" class="bandeira-eua" onclick="mudarIdioma('ingles')" src="img/flag_en35.png" alt="Bandeira EUA">
+                            </picture>
+                        </li>
+                        <li class="li-bandeiras">
+                            <picture>
+                                <source srcset="img/flag_br20.jpg" media="(max-width: 600px)" alt="Bandeira do Brasil."/>
+                                <source srcset="img/flag_br25.jpg" media="(max-width: 850px)" alt="Bandeira do Brasil."/>
+                                <img id="bandeira-brasil" class="escondido" onclick="mudarIdioma('portugues')" src="img/flag_br35.jpg" alt="Bandeira do Brasil.">
+                            </picture>
+                        </li>
+                        <li class="li-bandeiras">
+                            <picture>
+                                <source srcset="img/flag_esp20.png" media="(max-width: 600px)" alt="Bandeira da Espanha."/>
+                                <source srcset="img/flag_esp25.png" media="(max-width: 850px)" alt="Bandeira da Espanha."/>
+                                <img id="bandeira-espanha" class="escondido" onclick="mudarIdioma('espanhol')" src="img/flag_esp35.png" alt="Bandeira da Espanha.">
+                            </picture>
+                        </li>
+                    </ul>
+                </button>
+            </ul>
+        </nav>
+        <img class="icone-menu" src="img/menu_icon.svg" alt="Ícone do menu">
+    </header>
+    <main>
+        <section class="whatsapp">
+            <a id="linkwhatsapp" href="https://bit.ly/47FHAut" target="_blank">
+                <div class="divwhatsapp">
+
+                    <img
+                        src="data:image/png;base64,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">
+
+                    <p id="entre-em-contato">Entre em contato</p>
+                </div>
+            </a>
+            </div>
+        </section>
+        
+        <section class="inicio">
+            <div class="carousel-container">
+                <div id="slide1" class="carousel-slide"></div>
+                <div id="slide2" class="carousel-slide"></div>
+                <div id="slide3" class="carousel-slide"></div>
+            </div>
+
+            <button><a id="entre-em-contato-whats" href="https://bit.ly/47FHAut'" target="_blank">Entre em contato</a></button>
+        </section>
+
+        <section class="somos">
+            <div class="textos">
+
+                <h2 id="somos-titulo">Por que somos diferenciados?</h2>
+                <p id="somos-texto">Somos uma empresa de transporte executivo de alto padrão. Atendemos os principais hotéis de Porto
+                    Alegre
+                    como
+                    Hilton e Radisson. Somos a empresa de transporte fornecedora da Dell, SAP, Oracle, Mc kinsey, Évora,
+                    YARA,
+                    entre outros. Inglês e Espanhol</p>
+                <button id="saibaMaisBtn">Saiba mais!</button>
+            </div>
+
+        </section>
+
+        <section class=" parceiros">
+
+            <div class="parceiro1 parceiro"><img  src="./img/art_hotel_novo.png" alt="logo  do hotel Art">
+
+                <p id="arthotel-texto">O Art Hotel Transamerica Collection é um hotel de padrão internacional localizado em uma região nobre
+                    de Porto Alegre, conhecida por suas belas paisagens e parques. O hotel oferece excelência no
+                    serviço, ótimo atendimento e conforto, com máximo estilo.
+                </p>
+            </div>
+
+            <div class="parceiro2 parceiro">
+                <img src="./img/logo Casa da Montanha_4.webp" alt="logo do hotel Casa da Montanha">
+                <p id="casa-da-montanha-texto">O Hotel Casa da Montanha é um dos mais tradicionais hotéis de Gramado, localizado a apenas 2
+                    quarteirões da Rua Coberta e do Palácio dos Festivais. Desde 1997, o hotel tem proporcionado uma
+                    experiência única na Serra Gaúcha.
+                </p>
+            </div>
+
+            <div class="parceiro3 parceiro">
+                <img src="./img/hilton-logo.png" alt="logo do hotel Hilton">
+                <p id="hilton-texto">O Hilton Porto Alegre é um hotel de padrão internacional localizado no bairro de Moinhos de Vento, a
+                    15 minutos de carro do Aeroporto Internacional Salgado Filho.
+                </p>
+            </div>
+
+            <div class="parceiro4 parceiro">
+                <img src="./img/DoubletreeLogo.svg.png" alt="logo do hotel DoubleTree by Hiltoj">
+                <p id="doubletree-texto">A DoubleTree by Hilton é uma marca de hotéis globalmente reconhecida, com mais de 580 hotéis e
+                    resorts espalhados pelo mundo. Conhecida por seu serviço caloroso e acolhedor.</p>
+
+            </div>
+
+            <div class="parceiro5 parceiro">
+                <img src="./img/logo_parkplaza_4.webp" alt="logo do hotel plaza">
+                <p id="parkplaza-texto">O Park Plaza Moinhos Porto Alegre é um hotel 3 estrelas localizado em Porto Alegre, a 5,5 km da Arena
+                    do Grêmio. </p>
+            </div>
+
+
+
+        </section>
+        <section class="frota">
+
+            <h3 id="frota-titulo">Frota DriveUp</h3>
+            <div class="cards">
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <h4 id="frota-executivo">Executivos</h4>
+
+                            <p id="opcao-blindados">Opções blindadas</p>
+
+                            <img src="./img/cruze.png" alt="Carro de luxo Cruza">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <h4 id="frota-suv">SUV</h4>
+
+                            <p class="hidden">dasda</p>
+
+                            <img src="./img/tiggo.png" alt="Carro de luxo Tiggo">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <h4 id="frota-minivan">Minivan</h4>
+                            <p id="texto-minivan">Exclusivo Florida</p>
+                            <img src="./img/DriveUpIMG/minivan_eua.png" alt="Carro de luxo C180">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="main_footer">
+        <div class="footeer_content">
+            <div class="all_footer">
+                <div class="contat">
+                    <h1 id="endereco-titulo">Endereço</h1>
+                    <h3 id="endereco-texto">Rua: Olavo Barreto Viana, 18 - Moinhos de Vento</h3>
+                    <h3>CEP : 90570-070</h3>
+                </div>
+                <div class="contat">
+                    <h1 id="contato-titulo">Contato</h1>
+                    <h3 id="contato-texto">Fone: +55 (51) 9620-0409</h3>
+                    <h3 id="contato-texto2">Fone: +1 (689) 837-9863</h3>
+                    <h3>Contract@driveup.com.br</h3>
+                </div>
+                <div class="contat">
+                    <h1 id="siga-nos-titulo">Siga-nos</h1>
+                    <ul class="footer_lks">
+                        <a target="_blank" href="https://www.instagram.com/driveupexecutive/" class="footer_link"
+                            id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/driveupexecutive/" class="footer_link"
+                            id="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a target="_blank" href="https://bit.ly/47FHAut" class="footer_link" id="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="boximg">
+                <div class="imgfooter">
+                    <picture>
+                        <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 400px)" alt="Logo DriveUp"/>
+                        <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="script_cabecalho_mobile.js"></script>
+</body>
+
+</html>

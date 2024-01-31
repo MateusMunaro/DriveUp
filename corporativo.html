@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporativo</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="./img/Lgoo_DriveUp_32x10.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/Lgoo_DriveUp_32x10.png" type="image/x-icon">
+    <link rel="stylesheet" href="style_corporativo.css">
+    <link rel="stylesheet" href="style_cabecalho.css">
+    <link rel="stylesheet" href="style_rodape.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;1,300&family=Quintessential&family=Titillium+Web:wght@300;400&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <picture>
+            <source srcset="img/DriveUp_Oficial150.webp" media="(max-device-width: 480px)" />
+            <source srcset="img/DriveUp_Oficial120.webp" media="(max-width: 700px)" />
+            <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 850px)" />
+            <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">
+        </picture>
+        <nav>
+            <ul>
+                <li><a id="pagina-inicio" href="index.html">Início</a></li>
+                <li><a id="pagina-corporativo" href="corporativo.html">Corporativo</a></li>
+                <li><a id="pagina-turismo" href="Turismo.html">Turismo</a></li>
+                <button class="idioma" onclick="menuIdiomas()">
+                    <ul class="caixa-bandeiras">
+                        <li class="li-bandeiras1">
+                            <picture>
+                                <source srcset="img/flag_en20.png" media="(max-width: 600px)" alt="bandeira EUA."/>
+                                <source srcset="img/flag_en25.png" media="(max-width: 850px)" alt="bandeira EUA."/>
+                                <img id="bandeira-eua" class="bandeira-eua" onclick="mudarIdioma('ingles')" src="img/flag_en35.png" alt="Bandeira EUA">
+                            </picture>
+                        </li>
+                        <li class="li-bandeiras">
+                            <picture>
+                                <source srcset="img/flag_br20.jpg" media="(max-width: 600px)" alt="Bandeira do Brasil."/>
+                                <source srcset="img/flag_br25.jpg" media="(max-width: 850px)" alt="Bandeira do Brasil."/>
+                                <img id="bandeira-brasil" class="escondido" onclick="mudarIdioma('portugues')" src="img/flag_br35.jpg" alt="Bandeira do Brasil.">
+                            </picture>
+                        </li>
+                        <li class="li-bandeiras">
+                            <picture>
+                                <source srcset="img/flag_esp20.png" media="(max-width: 600px)" alt="Bandeira da Espanha."/>
+                                <source srcset="img/flag_esp25.png" media="(max-width: 850px)" alt="Bandeira da Espanha."/>
+                                <img id="bandeira-espanha" class="escondido" onclick="mudarIdioma('espanhol')" src="img/flag_esp35.png" alt="Bandeira da Espanha.">
+                            </picture>
+                        </li>
+                    </ul>
+                </button>
+            </ul>
+        </nav>
+        <img class="icone-menu" src="img/menu_icon.svg" alt="Ícone do menu">
+    </header>
+    <main>
+        <section class="whatsapp">
+            <a id="linkwhatsapp" href="https://bit.ly/47FHAut" target="_blank">
+                <div class="divwhatsapp">
+
+                    <img src="data:image/png;base64,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">
+
+                    <p id="entre-em-contato-whats">Entre em contato</p>
+                </div>
+            </a>
+            </div>
+        </section>
+        <div class="first_main">
+            <div class="text_main">
+                <aside>
+                    <h1 id="titulo-corporativo">CORPORATIVO</h1>
+                    <br>
+                    <p id="texto-corporativo">Oferecendo serviços de transporte corporativo que transcendem expectativas e impulsionam o seu negócio para novas conquistas.</p>
+                </aside>
+            </div>
+        </div>
+        <div class="second_main">
+            <article>
+                <br>
+                <h1 id="titulo-nossos-servicos">Nossos Serviços</h1>
+                <p id="texto-nossos-servicos" class="texto_secondmain">Estamos dedicados a assegurar aos nossos clientes o mais elevado padrão de qualidade,
+                    profissionalismo e sofisticação. Alcançamos esse objetivo não apenas proporcionando uma condução
+                    segura, pontual e luxuosa, mas também ao criar uma experiência exclusiva a cada etapa da jornada
+                    conosco.</p>
+                <div class="columns_main">
+                    <div class="columns">
+                        <i class="fa-solid fa-car"></i>
+                        <h1 id="servico-frota-titulo">Frota de luxo</h1>
+                        <p id="servico-frota-texto">Viaje com elegância em nossa frota de veículos executivos, Sedãs de
+                            luxo e SUVs.</p>
+                    </div>
+                    <div class="columns">
+                        <i class="fa-solid fa-lock"></i>
+                        <h1 id="servico-privacidade-titulo">Privacidade</h1>
+                        <p id="servico-privacidade-texto">Garantindo viagens exclusivas e discretas, onde sua
+                            tranquilidade e conforto são prioridades
+                            em cada deslocamento</p>
+                    </div>
+                    <div class="columns">
+                        <i class="fa-solid fa-id-card"></i>
+                        <h1 id="servico-motoristas-titulo">Motoristas profisionais</h1>
+                        <p id="servico-motoristas-texto">Combinando habilidade técnica, conhecimento das normas de
+                            trânsito e um compromisso dedicado
+                            para garantir viagens seguras e eficientes.</p>
+                    </div>
+                    <div class="columns">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                        <h1 id="servicos-personalizados-titulo">Serviços personalizados</h1>
+                        <p id="servicos-personalizados-texto">Proporcionamos um serviço de transporte flexível, adaptado
+                            às suas preferências individuais e
+                            necessidades.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        </div>
+        <div class="third_main">
+            <article class="third_main_content">
+                <h1 id="clientes-titulo">Clientes DriveUp</h1>
+                <div class="box_third">
+                    <div class="third_columns">
+                        <div class="carousel-container">
+                            <ul class="parceiros">
+                                <li class="card"><img class="logo_dell" src="img/Dell-Logo.png" alt="Logo da Dell"></li>
+                                <li class="card"><img class="logo_oracle" src="img/Oracle-Symbol.png"
+                                        alt="Logo da Oracle"></li>
+                                <li class="card"><img class="logo_sap" src="img/SAP_2011_logo.svg.png"
+                                        alt="Logo da SAP"></li>
+                                <li class="card"><img class="logo_evora" src="img/evora_2.png" alt="Logo da Evora"></li>
+                                <li class="card"><img class="logo_hilton" src="img/hilton-logo.png" alt="Logo do Hilton"></li>
+                                <li class="card"><img class="logo casa_da_montanha" src="img/logo Casa da Montanha_4.webp" alt="Logo casa da montanha"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="main_footer">
+        <div class="footeer_content">
+            <div class="all_footer">
+                <div class="contat">
+                    <h1 id="endereco-titulo">Endereço</h1>
+                    <h3 id="endereco-texto">Rua: Olavo Barreto Viana, 18 - Moinhos de Vento</h3>
+                    <h3>CEP : 90570-070</h3>
+                </div>
+                <div class="contat">
+                    <h1 id="contato-titulo">Contato</h1>
+                    <h3 id="contato-texto">Fone: +55 (51) 9620-0409</h3>
+                    <h3 id="contato-texto2">Fone: +1 (689) 837-9863</h3>
+                    <h3>Contract@driveup.com.br</h3>
+                </div>
+                <div class="contat">
+                    <h1 id="siga-nos-titulo">Siga-nos</h1>
+                    <ul class="footer_lks">
+                        <a target="_blank" href="https://www.instagram.com/driveupexecutive/" class="footer_link"
+                            id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/driveupexecutive/" class="footer_link"
+                            id="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a target="_blank" href="https://bit.ly/47FHAut" class="footer_link" id="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="boximg">
+                <div class="imgfooter">
+                    <picture>
+                        <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 400px)" alt="Logo DriveUp"/>
+                        <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script_corporativo.js"></script>
+    <script src="script_cabecalho_mobile.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Estilização cabeçalho */
+header {
+    background-color: #0000007a;
+    height: 15vb;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 9999;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > picture > img {
+    padding-left: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    max-width: 460px;
+    min-width: 150px;
+}
+
+ul > li {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-right: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+ul > li > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Menu de idiomas */
+button.idioma {
+    cursor: pointer;
+    width: 40px;
+    height: 35px;
+    border: 0px;
+    margin-right: 15px;
+    background-color: transparent;
+}
+
+ul.caixa-bandeiras {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 45px;
+    height: 35px;
+}
+
+ul.caixa-bandeiras-ativa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 45px;
+    height: 108px;
+    background-color: #ffffff;
+}
+
+.li-bandeiras1 {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    padding-bottom: 1px;
+}
+
+.li-bandeiras {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+}
+
+.escondido {
+    display: none;
+}
+
+.icone-menu {
+    display: none;
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+/* Responsividade do cabeçalho para telas menores. */
+@media (max-width:1150px) {
+    ul > li {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width:850px) {
+    ul > li {
+        font-size: 0.9em;
+    }
+
+    ul.caixa-bandeiras-ativa {
+        width: 35px;
+        height: 80px;
+    }
+}
+
+@media (max-width:650px) {
+    ul > li {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 600px) {
+    ul > li {
+        margin-right: 30px;
+    }
+
+    ul.caixa-bandeiras-ativa {
+        width: 30px;
+        height: 70px;
+    }
+}
+
+
+/* Cabeçalho versão mobile. */
+@media screen and (max-device-width: 480px) {
+    .icone-menu {
+        display: block;
+        
+    }
+    header {
+        height: 10vh;
+    }
+
+    nav {
+        display: block;
+        position: absolute;
+        top: 10vh;
+        right: 0; 
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    nav.mobile {
+        display: block;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: #23232e;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(0);
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;  
+    }
+
+    nav > ul > li {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 45px;
+    }
+
+    nav > ul > button.idioma {
+        margin-right: 8px;
+        margin-top: 30px;
+    }
+
+    ul.caixa-bandeiras-ativa {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+
+
+.whatsapp {
+    position: fixed;
+    top: 88vh; 
+    left: 95%;
+    z-index: 999;
+    background: none;
+}
+
+.divwhatsapp {
+    display: flex; /* Adicionando flexbox para alinhar itens lado a lado */
+    align-items: center; /* Centralizando verticalmente os itens */
+    background: #40c351;
+    width: 50px; 
+    height: 50px; 
+    padding: 5px;
+    border-radius: 100px;
+    transition: width 0.3s ease; /* Alterando a propriedade da transição para width */
+}
+.divwhatsapp img {
+    display: block; /* Remova o display: flex */
+    margin: 0 auto; /* Adicione esta linha para centralizar horizontalmente */
+    max-width: 100%; /* Adicione esta linha para garantir que a imagem não ultrapasse a largura da div */
+}
+
+.divwhatsapp p {
+    visibility: hidden;
+    margin-left: 10px; /* Ajuste o espaçamento conforme necessário */
+    color: #ffffff;
+    text-decoration: none;
+    text-underline-offset: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.divwhatsapp:hover {
+    background: #40c351;
+    width: 140px; 
+    height: 7vh; 
+    border-radius: 100px;
+    margin-left: -80px; /* Ajustando o margin-left para abrir para a esquerda */
+    transition: 1s;
+}
+
+.divwhatsapp:hover p {
+    visibility: visible;
+    
+    list-style: none;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .whatsapp {
+        left: 94%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .whatsapp {
+        left: 93%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .whatsapp {
+        left: 92%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .whatsapp {
+        left: 92%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .whatsapp {
+        left: 91%;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .whatsapp {
+        left: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .whatsapp {
+        left: 88%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .whatsapp {
+        left: 84%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .whatsapp {
+        top: 88vh;
+        left: 82%;
+    }
+}
