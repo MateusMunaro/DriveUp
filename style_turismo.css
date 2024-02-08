@@ -131,13 +131,14 @@ section.turismo > div {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 650px;
+    width: 100%;
+    max-width: 54%;
     background-color: #0000006c;
 }
 
 section.turismo > div > h1 {
     color: #ffffff;
-    width: 200px;
+    width: 80%;
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -147,7 +148,7 @@ section.turismo > div > h1 {
 
 section.turismo > div > p {
     color: #ffffff;
-    width: 400px;
+    width: 80%;
     margin-top: 1%;
     margin-left: auto;
     margin-right: auto;
@@ -385,10 +386,8 @@ article {
 /* Responsividade do seção turismo. */
 
 @media (max-width: 600px) {
-    section.turismo > div {
-        height: 900px;
-        width: 420px;
-        background-image: url(img/DriveUpIMG/imagem_turismo_celular.jpeg);
+    section.turismo {
+        background-image: url("img/DriveUpIMG/imagem_turismo_celular.jpeg");
         background-size: cover;
     }
 
@@ -401,31 +400,14 @@ article {
      }
 }
 
-@media screen and (max-device-width: 400px) {
+@media (max-device-width: 480px) {
     section.turismo > div {
-        height: 730px;
-        width: 400px;
-        background-image: url(img/DriveUpIMG/imagem_turismo_celular.jpeg);        
-        background-size: cover;
-    }
-    section.turismo > div > h1 {
-        font-size: 1.8em;
-        margin-left: 28%;
-    }
-     
-     section.turismo > div > p {
-         font-size: 1.1em;
-         width: 95%;
-         margin-left: 6%;
+        max-width: 100%;
     }
 }
 
-
-@media screen and (max-device-width: 300px) {
-    section.turismo > div {
-        background-image: url(img/DriveUpIMG/imagem_turismo_celular.jpeg);
-        background-size: cover;
-        height: 730px;
-        width: 280px;
+@media screen and (max-device-width: 400px) {
+    section.turismo > div > h1 {
+        font-size: 1.4em;
     }
 }

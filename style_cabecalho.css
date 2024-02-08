@@ -5,8 +5,8 @@
 
 /* Estilização cabeçalho */
 header {
-    background-color: #0000007a;
-    height: 15vb;
+    background-color: rgba(0, 0, 0, 0.7); /* Preto com 50% de opacidade */
+    height: 15vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -30,8 +30,6 @@ nav > ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    max-width: 460px;
-    min-width: 150px;
 }
 
 ul > li {
@@ -144,7 +142,6 @@ ul.caixa-bandeiras-ativa {
 @media screen and (max-device-width: 480px) {
     .icone-menu {
         display: block;
-        color: white;
         background-color: rgba(102, 102, 102, 0.301);
         
     }
@@ -165,10 +162,9 @@ ul.caixa-bandeiras-ativa {
         display: block;
         position: absolute;
         top: 10vh;
-        right: 0;
-        width: 50vw;
+        width: 52%;
         height: 100vh;
-        background-color: #23232e;
+        background-color: #00000098;
         flex-direction: column;
         align-items: center;
         transform: translateX(0);
@@ -185,6 +181,10 @@ ul.caixa-bandeiras-ativa {
         margin-left: auto;
         margin-right: auto;
         margin-top: 45px;
+    }
+
+    nav > ul > li > a {
+        color: #ffffff;
     }
 
     nav > ul > button.idioma {

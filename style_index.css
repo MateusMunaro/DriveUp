@@ -189,20 +189,20 @@ section {
 }
 
 .parceiro img {
-    width: auto;
     height: 100px;
-    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .parceiro1 img {
-    width: auto;
-    height: 20%;
-    background-color: rgba(0, 0, 0, 0.2);
+    width: 15%;
+    height: 20vh;
+    
 }
 
 .parceiro5 img {
     width: auto;
-    height: 40%;
-    background-color: rgba(0, 0, 0, 0.2);
+    height: 25vh;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Estilos específicos para cada parceiro */
@@ -531,6 +531,120 @@ section {
 .hidden {
     visibility: hidden;
 }
+
+.comentarios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.coments h3 {
+    margin-left: 44%;
+    font-size: 2em;
+    color: white;
+    
+}
+
+.coments_container {
+    border-top: 2px solid white;
+    display: flex;
+    height: 60vh;
+    width: 90%;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.coments_cards {
+    overflow: hidden;
+    border-radius: 25px;
+    width: 50%;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.2); /* 0.5 define 50% de opacidade */
+
+}
+.img_estrelas {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+}
+.img_estrelas img {
+    margin-left: 6%;
+    margin-top: 2vh;
+}
+
+.img_estrelas p {
+    height: auto;
+    width: auto;
+    margin-top: 5vh;
+    font-size: 0.9em;
+    margin-left: 1.5vh;
+    color: white;
+}
+
+.estrelas {
+    font-size: 0.9em;
+    color: gold;
+    height: 3vh;
+    margin-top: 5vh;
+    margin-left: 6%;
+
+}
+.coments_text {
+    margin-top: 2vh;
+    font-size: 0.9em;
+    padding: 20px;
+    display: flex;
+    text-align: justify;
+    height: 15vh;
+}
+
+.coments_text p {
+    color: white;
+}
+
+.comentarios button {
+    height: 35vh;
+    width: 4%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2); /* 0.5 define 50% de opacidade */
+}
+
+@media (max-width: 450px) {
+
+    .coments h3 {
+        margin-left: 33%;
+        font-size: 2em;
+        color: white;
+        
+    }
+
+    .coments_container {
+        border-top: 2px solid white;
+        display: flex;
+        height: 60vh;
+        width: 90%;
+        gap: 3vh;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .coments_cards {
+        overflow: hidden;
+        border-radius: 25px;
+        width: 70%;
+        height: 40vh;
+        background-color: rgba(0, 0, 0, 0.2); /* 0.5 define 50% de opacidade */
+    
+    }
+
+}
+
+
+
 /* Adicione media queries para tornar o layout responsivo */
 @media only screen and (max-width: 768px) {
     .flip-container {

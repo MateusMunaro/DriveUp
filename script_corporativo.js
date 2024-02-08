@@ -69,7 +69,7 @@ const textos = {
       'pagina-corporativo': 'Corporativo',
       /*Tradução da página */  
       'entre-em-contato-whats': 'Entre em contato',
-      'titulo-corporativo': 'Corporativo',  
+      'titulo-corporativo': 'CORPORATIVO',  
       'texto-corporativo': 'Oferecendo serviços de transporte corporativo que transcendem expectativas e impulsionam o seu negócio para novas conquistas.',
       'titulo-nossos-servicos': 'Nossos serviços',
       'texto-nossos-servicos': 'Estamos dedicados a assegurar aos nossos clientes o mais elevado padrão de qualidade, profissionalismo e sofisticação. Alcançamos esse objetivo não apenas proporcionando uma condução segura, pontual e luxuosa, mas também ao criar uma experiência exclusiva a cada etapa da jornada conosco.',
@@ -97,7 +97,7 @@ const textos = {
       'pagina-corporativo': 'Corporate',
       /*Tradução da página */    
       'entre-em-contato-whats': 'Contact us',
-      'titulo-corporativo': 'Corporate',  
+      'titulo-corporativo': 'CORPORATE',  
       'texto-corporativo': 'Offering corporate transportation services that transcend expectations and boost your business for new achievements.',
       'titulo-nossos-servicos': 'Our services',
       'texto-nossos-servicos': 'We are dedicated to ensuring our customers have the highest standard of quality, professionalism and sophistication. We achieve this goal by not only providing safe, punctual and luxurious driving, but also by creating a unique experience at every step of the journey with us.',
@@ -125,7 +125,7 @@ const textos = {
       'pagina-corporativo': 'Corporativo',
       /*Tradução da página */    
       'entre-em-contato-whats': 'Entre en contacto',
-      'titulo-corporativo': 'Corporativo',  
+      'titulo-corporativo': 'CORPORATIVO',  
       'texto-corporativo': 'Ofreciendo servicios de transporte corporativo que trascienden las expectativas e impulsan su negocio hacia nuevos logros.',
       'titulo-nossos-servicos': 'Nuestros servicios',
       'texto-nossos-servicos': 'Estamos dedicados a garantizar que nuestros clientes tengan el más alto nivel de calidad, profesionalismo y sofisticación. Logramos este objetivo no solo brindando una conducción segura, puntual y lujosa, sino también creando una experiencia única en cada paso del viaje con nosotros.',

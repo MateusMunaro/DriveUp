@@ -99,7 +99,7 @@ const textos = {
       'pagina-corporativo': 'Corporativo',
       /*Tradução da página */    
       'entre-em-contato-whats': 'Entre en contacto',
-      'turismo-titulo': 'Turismo',
+      'turismo-titulo': 'TURISMO',
       'turismo-texto': 'Viaja con nosotros y descubre lo mejor del turismo con calidad y dedicación.',
       'destinos-titulo': 'Destinos',
       'gramado-texto1': 'Gramado es un refugio encantador rodeado de paisajes impresionantes. Con sus calles llenas de flores y su arquitectura europea, encanta con su ambiente acogedor y su cocina irresistible.',

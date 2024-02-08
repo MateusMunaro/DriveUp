@@ -56,7 +56,59 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-//script whatsapp para Iphone
+
+document.addEventListener('DOMContentLoaded', function () {
+  const slides = document.querySelectorAll('.coments_cards');
+  const totalSlides = slides.length;
+  let currentIndex = 0;
+
+  // Defina o número de slides visíveis com base na largura da tela
+  let visibleSlides = (window.innerWidth < 750) ? 1 : 4;
+
+  // Exibe os slides iniciais
+  showSlide();
+
+  // Adiciona os ouvintes de eventos aos botões de navegação
+  document.getElementById('prevButton').addEventListener('click', function () {
+    currentIndex = (currentIndex > 0) ? currentIndex - visibleSlides : totalSlides - visibleSlides;
+    showSlide();
+  });
+
+  document.getElementById('nextButton').addEventListener('click', function () {
+    currentIndex = (currentIndex < totalSlides - visibleSlides) ? currentIndex + visibleSlides : 0;
+    showSlide();
+  });
+
+  // Função para exibir os slides atuais
+  function showSlide() {
+    for (let i = 0; i < totalSlides; i++) {
+      slides[i].style.display = 'none';
+    }
+
+    for (let i = 0; i < visibleSlides && currentIndex + i < totalSlides; i++) {
+      const index = (currentIndex + i) % totalSlides;  // Ajuste para obter o índice correto, considerando o carrossel contínuo
+      slides[index].style.display = 'block';
+    }
+  }
+});
+
+// Atualiza o número de slides visíveis ao redimensionar a janela
+window.addEventListener('resize', function () {
+  visibleSlides = (window.innerWidth < 750) ? 1 : 4;
+  showSlide();
+});
+
+// Atualiza o número de slides visíveis ao redimensionar a janela
+window.addEventListener('resize', function () {
+  visibleSlides = (window.innerWidth < 750) ? 1 : 4;
+  showSlide();
+});
+
+// Atualiza o número de slides visíveis ao redimensionar a janela
+window.addEventListener('resize', function () {
+  visibleSlides = (window.innerWidth < 750) ? 1 : 4;
+  showSlide();
+});
 
 /* Menu dos idiomas */
 function menuIdiomas () {
@@ -106,7 +158,17 @@ const textos = {
     'frota-suv': 'SUV',
     'frota-minivan': 'Minivan',
     'texto-minivan': 'Exclusivo Florida',
-    /*Tradução do rodapé */
+    'titulo-avaliacoes': 'Avaliações',
+    /* Tradução das avaliações */
+    'comentario-1': 'Tiago e sua equipe são um sonho de lidar. Profissionais, prestativos, sempre pontuais e facilitam muito a viagem por Porto Alegre. Eu não posso recomendar-los o suficiente!',
+    'comentario-2': 'Excelente...Mateus  nos levou de POA a Caxias do Sul  com muitos bloqueios devido temporal e foi sempre  cuidadoso,  educado,  prestativo, enfim.so elegios para o serviço.. carro super confortável..parabéns  e gratidão',
+    'comentario-3': 'Tivemos um dia maravilhoso conhecendo Canela e Gramado.  Gratidão',
+    'comentario-4': 'DriveUP me prestou um excelente serviço. Destaco a pontualidade, flexibilidade e gentileza dos motoristas.',
+    'comentario-5': 'Serviço de excelência. Motorista atencioso, super cuidadoso; carro novo, limpo, confortável. Quem nos atendeu foi o Gênesis - super querido. Recomendo demais a DriveUp!',
+    'comentario-6': 'Excelente serviço de transporte executivo. Educação, pontualidade, cordialidade, comodidade e segurança garantidas. Usamos para assistir a um show na Arena do Grêmio, local de difícil acesso a táxis e Uber. Serviço excelente.',
+    'comentario-7': 'A van era muito confortável e o motorista também foi muito gentil. Se tiver oportunidade de visitar Porto Alegre novamente, usarei novamente e recomendarei aos meus amigos.',
+    'comentario-8': 'Eu tive um guia/motorista incrível chamado Tioga. Ele foi muito simpático, fala inglês muito bem e conhece muito bem a história alemã e a logística da região. Recomendo a todos que façam seu tour por Gramado e Canela.',
+    /* Tradução do rodapé */
     'endereco-titulo': 'Endereço',
     'endereco-texto': 'Rua: Olavo Barreto Viana, 18 - Moinhos de Vento',
     'contato-titulo': 'Contato',
@@ -136,6 +198,15 @@ const textos = {
     'frota-suv': 'SUV',
     'frota-minivan': 'Minivan',
     'texto-minivan': "Only in Florida",
+    'titulo-avaliacoes': 'Reviews',
+    'comentario-1': "Tiago and his team are a dream to deal with. Professional, helpful, always punctual and make traveling through Porto Alegre very easy. I can't recommend them enough!",
+    'comentario-2': 'Excellent...Mateus took us from POA to Caxias do Sul with many blockages due to the weather and was always careful, polite, helpful, in short. So high praise for the service.. super comfortable car.. congratulations and gratitude',
+    'comentario-3': 'We had a wonderful day getting to know Canela and Gramado. Gratitude',
+    'comentario-4': 'DriveUP provided me with excellent service. I highlight the punctuality, flexibility and kindness of the drivers.',
+    'comentario-5': 'Excellent service. Attentive, super careful driver; New, clean, comfortable car. The person who attended to us was Gênesis - super sweet. I highly recommend DriveUp!',
+    'comentario-6': 'Excellent executive transport service. Education, punctuality, cordiality, convenience and safety guaranteed. We used it to watch a show at Arena do Grêmio, a place difficult to access by taxis and Uber. Excellent service.',
+    'comentario-7': 'The van was very comfortable and the driver was also very kind. If I have the opportunity to visit Porto Alegre again, I will use it again and recommend it to my friends.',
+    'comentario-8': 'I had an amazing guide/driver called Tioga. He was very friendly, speaks very good English and knows German history and the logistics of the region very well. I recommend everyone to take a tour of Gramado and Canela.',
     /*Tradução do rodapé */
     'endereco-titulo': 'Address',
     'endereco-texto': 'Street: Olavo Barreto Viana, 18 - Moinhos de Vento',
@@ -166,6 +237,15 @@ const textos = {
     'frota-suv': 'SUV',
     'frota-minivan': 'Minivan',
     'texto-minivan': "Sólo en florida",
+    'titulo-avaliacoes': 'Opiniones',
+    'comentario-1': 'Tiago y su equipo son un sueño con el que lidiar. Profesionales, serviciales, siempre puntuales y hacen que viajar por Porto Alegre sea muy fácil. ¡No puedo recomendarlos lo suficiente!',
+    'comentario-2': 'Excelente...Mateus nos llevó de POA a Caxias do Sul con muchos bloqueos por el clima y siempre fue cuidadoso, educado, servicial, en fin. Un gran elogio por el servicio.. auto súper cómodo.. felicidades y agradecimiento.',
+    'comentario-3': 'Tuvimos un día maravilloso conociendo a Canela y Gramado. Gratitud',
+    'comentario-4': 'DriveUP me brindó un excelente servicio. Destaco la puntualidad, flexibilidad y amabilidad de los conductores.',
+    'comentario-5': 'Excelente servicio. Conductor atento y súper cuidadoso; Coche nuevo, limpio y cómodo. La persona que nos atendió fue Gênesis - súper dulce. ¡Recomiendo ampliamente DriveUp!',
+    'comentario-6': 'Excelente servicio de transporte ejecutivo. Educación, puntualidad, cordialidad, comodidad y seguridad garantizadas. Lo usamos para ver un espectáculo en Arena do Grêmio, un lugar de difícil acceso en taxi y Uber. Excelente servicio.',
+    'comentario-7': 'La furgoneta era muy cómoda y el conductor también fue muy amable. Si tengo la oportunidad de visitar Porto Alegre nuevamente, lo usaré nuevamente y lo recomendaré a mis amigos.',
+    'comentario-8': 'Tuve un guía/conductor increíble llamado Tioga. Fue muy amable, habla muy bien inglés y conoce muy bien la historia alemana y la logística de la región. Recomiendo a todos que hagan un recorrido por Gramado y Canela.',
     /*Tradução do rodapé */
     'endereco-titulo': 'Dirección',
     'endereco-texto': 'Calle: Olavo Barreto Viana, 18 - Moinhos de Vento',
@@ -198,13 +278,22 @@ function mudarIdioma(idioma) {
   document.getElementById('frota-suv').innerText = textos[idioma]['frota-suv'];
   document.getElementById('frota-minivan').innerText = textos[idioma]['frota-minivan'];
   document.getElementById('texto-minivan').innerText = textos[idioma]['texto-minivan'];
+  document.getElementById('titulo-avaliacoes').innerText = textos[idioma]['titulo-avaliacoes'];
+  document.getElementById('comentario-1').innerText = textos[idioma]['comentario-1'];
+  document.getElementById('comentario-2').innerText = textos[idioma]['comentario-2'];
+  document.getElementById('comentario-3').innerText = textos[idioma]['comentario-3'];
+  document.getElementById('comentario-4').innerText = textos[idioma]['comentario-4'];
+  document.getElementById('comentario-5').innerText = textos[idioma]['comentario-5'];
+  document.getElementById('comentario-6').innerText = textos[idioma]['comentario-6'];
+  document.getElementById('comentario-7').innerText = textos[idioma]['comentario-7'];
+  document.getElementById('comentario-8').innerText = textos[idioma]['comentario-8'];
   document.getElementById('endereco-titulo').innerText = textos[idioma]['endereco-titulo'];
   document.getElementById('endereco-texto').innerText = textos[idioma]['endereco-texto'];
   document.getElementById('contato-titulo').innerText = textos[idioma]['contato-titulo'];
   document.getElementById('contato-texto').innerText = textos[idioma]['contato-texto'];
   document.getElementById('contato-texto2').innerText = textos[idioma]['contato-texto2'];
   document.getElementById('siga-nos-titulo').innerText = textos[idioma]['siga-nos-titulo'];
-  
+
   /* Altera o link do whatsapp de acordo com o idioma da página. */
   var link_whatsapp = document.getElementById("linkwhatsapp");
   var link_entreEmContato = document.getElementById("entre-em-contato-whats");
