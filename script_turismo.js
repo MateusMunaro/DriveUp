@@ -54,7 +54,7 @@ const textos = {
       'endereco-titulo': 'Endereço',
       'endereco-texto': 'Rua: Olavo Barreto Viana, 18 - Moinhos de Vento',
       'contato-titulo': 'Contato',
-      'contato-texto': 'Fone: 5551 9392932132',
+      'contato-texto': 'Fone: 5551 99620-0409',
       'contato-texto2': 'Fone: +1 (689) 837-9863',
       'siga-nos-titulo': 'Siga-nos'
     },
@@ -88,7 +88,7 @@ const textos = {
       'endereco-titulo': 'Address',
       'endereco-texto': 'Street: Olavo Barreto Viana, 18 - Moinhos de Vento',
       'contato-titulo': 'Contact',
-      'contato-texto': 'Phone number: 5551 9392932132',
+      'contato-texto': 'Phone number: 5551 99620-0409',
       'contato-texto2': 'Phone number: +1 (689) 837-9863',
       'siga-nos-titulo': 'Follow us'
     },
