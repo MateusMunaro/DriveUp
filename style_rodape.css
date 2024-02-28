@@ -167,7 +167,7 @@
     }
 
     .box_footer {
-        height: 65vh;
+        height: 70vh;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -192,6 +192,7 @@
     }
 
     .footer_colum {
+        margin-left: 2.5%;
         display: flex;
         justify-content: space-around;
         width: 100%;
