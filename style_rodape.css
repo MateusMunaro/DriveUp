@@ -1,146 +1,221 @@
-.main_footer {
-    color: white !important;
-}
-
-.main_footer > a {
+.box_footer {
+    padding-top: 5vh;
     color: white;
-    text-decoration: none;
-}
-
-.main_footer {
-    font-family: Helvetica, sans-serif;
-    height: 40vh;
+    height: 50vh;
     display: flex;
-    padding: 10vh;
-    background-color: #141414;
-    color: white;
-    align-items: center;
-    justify-content: center; 
-}
-
-.footer_content {
-    display: flex;
-    align-items: center;       
-}
-
-.all_footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 3rem, 3.5rem;
-    text-align: center;
+    justify-content: space-around;
     align-items: flex-start;
 }
-
-.all_footer h1 {
-    font-size: 4vh;
+.first_colum {
+    font-size: 1.1em;
 }
 
-.all_footer h3 {
-    margin-top: 3vh;
-    font-size: 2.3vh;
+.second_colum h1 {
+    color: #384983;
+    font-size: 1.3em;
+}
+.footer_colum {
+    list-style: none;
+    margin-top: 2vh;
+    font-size: 1em;
 }
 
-.footer_lks {
-    margin-top: 5vh;
+.contato-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 3vh;
+    font-size: 1em;
 }
-
-.footer_link {
-    color: white;
-    font-size: 5vh;
+.contato-container h1 {
+    color: #384983;
+    font-size: 1.3em;
 }
-
-.boximg {
+.numero1 {
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    gap: 5px;
 }
 
-.imgfooter {
-    margin-top: 8vh;
+.numero1 h3{
+    display: inline;
+}
+
+.numero2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.numero2 h3 {
+    display: inline;
+}
+
+.email {
+    margin-top: 2vh;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: column; 
     align-items: center;
 }
+
+.follow_links {
+    display: flex;
+    gap: 20%;
+    justify-content: space-around;
+    font-size: 2.8em;
+}
+
+/* Cor do ícones */
+.fa-brands {
+    color: #4664AE;
+}
+
+.footer_links > button {
+    margin-top: 2vh;
+    border-radius: 25px;
+    height: 7vh;
+    width: 150%;
+    font-size: 1.5em;
+}
+
 
 /* responsividade footer*/
 
-@media (max-width: 700px) { 
-    .all_footer h1 {
-        font-size: 2.8vh;
+@media (max-width: 1200px) { 
+    .footer_colum h1 {
+        font-size: 1.1em;
     }
 
-    .all_footer h3 {
-        font-size: 1.8vh;
+    .second_colum h1 {
+        font-size: 1em;
     }
 
-    .footer_link {
-        font-size: 2.8vh;
+    .footer_colum a {
+        font-size: 1em;
+    }
+
+    .contato-container h1 {
+        font-size: 1.1em;
+    }
+
+    .contato-container h3 {
+        font-size: 1em;
+    }
+
+    .footer_links{
+        font-size: 2.2vh;
     }
 }
 
-@media (max-width: 600px) {
-    .main_footer {
-        font-family: Helvetica, sans-serif;
-        height: 20vh;
-        display: flex;
-        background-color: #141414;
-        color: white;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footer_content {
-        display: flex;
-        align-items: center;       
-    }
-    
-    .all_footer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+@media (max-width: 1000px) {
+    .first_colum {
+        width: 30%;
         text-align: center;
-        align-items: flex-start;
-        gap: 2.5vh;
-
     }
 
-    .all_footer h1 {
-        font-size: 2.3vh;
+    .first_colum h3 {
+        font-size: 0.8em;
     }
-    
-    .all_footer h3 {
-        margin-top: 1.5vh;
-        font-size: 1.5vh;
+
+    .first_colum p {
+        font-size: 0.8em;
     }
-    
-    .footer_lks {
-        margin-top: 1.8vh;
-        display: flex;
-        justify-content: space-between;
+
+    .footer_colum h1 {
+        font-size: 1em;
     }
-    
-    .footer_link {
-        color: white;
-        font-size: 1.8vh;
+
+    .footer_colum a {
+        font-size: 1.2em;
     }
-    
-    .boximg {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
+
+    .contato-container h1 {
+        font-size: 1em;
     }
-    
-    .imgfooter {
-        margin-top: 5vh;
-        align-items: center;
+
+    .contato-container h3 {
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    .footer_links {
+        font-size: 1.7vh;
+    }
+
+    .footer_links > button {
+        margin-top: 2vh;
+        border-radius: 25px;
+        height: 5vh;
+        width: 125%;
+        font-size: 1.5em;
     }
 }
+
+@media (max-width: 680) {
+    .footer_colum a {
+        font-size: 1em;
+    }
+}
+
 
 /* Dispositivos móveis */
-@media screen and (min-device-width: 300px) and (max-device-width: 400px) {
+@media (max-width: 580px) {
     .main_footer {
-        height: 20vh;
+        height: auto;
+    }
+
+    .box_footer {
+        height: 65vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 3vh;
+    }
+
+    .first_colum {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .first_colum > picture {
+        align-self: center;
+    }
+
+    .second_colum {
+        margin-top: 3vh;
+        width: 80%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .footer_colum {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .footer_colum > li {
+        margin: 0;
+    }
+
+    .footer_colum a {
+        font-size: 1.4em;
+    }
+
+    .contato-container {
+        margin-top: 3vh;
+        gap: 0;
+    }
+
+    .contato-container h1 {
+        text-align: center;
+    }
+
+    .email {
+        margin-top: 0vh;
     }
 
     .all_footer {
@@ -157,33 +232,17 @@
         font-size: 1.2vh;
     }
 
-    .footer_link {
-        color: white;
-        font-size: 1.8vh;
-    }
-}
-
-@media screen and (min-device-width: 200px) and (max-device-width: 299px) {
-    .main_footer {
-        height: 20vh;
-    }
-
-    .all_footer {
-        width: 275px;
-
-    }
-
-    .all_footer h1 {
-        font-size: 1.2vh;
-    }
-
-    .all_footer h3 {
-        margin-top: 1.5vh;
-        font-size: 0.9vh;
-    }
-
-    .footer_link {
+    .footer_links {
         color: white;
         font-size: 1.5vh;
+        padding-top: 5vh;
+    }
+
+    .footer_links > button {
+        margin-top: 3.5vh;
+        border-radius: 25px;
+        height: 8vh;
+        width: 150%;
+        font-size: 2em;
     }
 }

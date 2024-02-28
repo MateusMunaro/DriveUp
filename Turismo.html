@@ -260,55 +260,57 @@
         </section>
     </main>
     <footer class="main_footer">
-        <div class="footeer_content">
-            <div class="all_footer">
-                <div class="contat">
-                    <h1 id="endereco-titulo">Endereço</h1>
-                    <h3 id="endereco-texto">Rua: Olavo Barreto Viana, 18 - Moinhos de Vento</h3>
-                    <h3>CEP : 90570-070</h3>
-                </div>
-                <div class="contat">
-                    <h1 id="contato-titulo">Contato</h1>
-                    <h3 id="contato-texto">Fone: +55 (51) 9620-0409</h3>
-                    <picture class="bandeira_footer">
-                        <source srcset="img/flag_br20.jpg" media="(max-width: 600px)" alt="Bandeira do Brasil."/>
-                        <source srcset="img/flag_br25.jpg" media="(max-width: 850px)" alt="Bandeira do Brasil."/>
-                        <img class="bandeira_brasil_footer" src="img/flag_br35.jpg" alt="Bandeira do Brasil.">
-                    </picture>
-                    <h3 id="contato-texto2">Fone: +1 (689) 837-9863</h3>
-                    <picture class="bandeira_footer">
-                        <source srcset="img/flag_en20.png" media="(max-width: 600px)" alt="bandeira EUA."/>
-                        <source srcset="img/flag_en25.png" media="(max-width: 850px)" alt="bandeira EUA."/>
-                        <img class="bandeira_eua_footer" src="img/flag_en35.png" alt="Bandeira EUA">
-                    </picture>
-                    <h3>Contact@driveup.com.br</h3>
-                </div>
-                <div class="contat">
-                    <h1 id="siga-nos-titulo">Siga-nos</h1>
-                    <ul class="footer_lks">
-                        <a target="_blank" href="https://www.instagram.com/driveupexecutive/" class="footer_link"
-                            id="instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a target="_blank" href="https://www.facebook.com/driveupexecutive/" class="footer_link"
-                            id="facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a target="_blank" href="https://bit.ly/47FHAut" class="footer_link" id="whatsapp">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-            <div class="boximg">
-                <div class="imgfooter">
+        <footer class="main_footer">
+            <section class="box_footer">
+                <div class="first_colum">
                     <picture>
                         <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 400px)" alt="Logo DriveUp"/>
-                        <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">
+                        <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 740px)" />
+                        <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">                    
                     </picture>
+                    <h3 id="endereco-texto">Rua: Olavo Barreto Viana, 18 - Moinhos de Vento</h3>
+                    <p>CEP : 90570-070</p>
                 </div>
-            </div>
-        </div>
+                <div class="second_colum">
+                    <h1>Navegação</h1>
+                    <ul class="footer_colum">
+                        <li><a id="pagina-inicio" href="index.html">Início</a></li>
+                        <li><a id="pagina-corporativo" href="corporativo.html">Corporativo</a></li>
+                        <li><a id="pagina-turismo" href="Turismo.html">Turismo</a></li>
+                    </ul>
+                </div>
+                <div class="third_colum">
+                    <div class="contato-container">
+                        <h1>Contato</h1>
+                        <div class="numero1">
+                            <h3 id="contato-texto">Fone: +55 (51) 9620-0409</h3>
+                            <picture class="bandeira_footer">
+                              <source srcset="img/flag_br20.jpg" media="(max-width: 600px)" alt="Bandeira do Brasil."/>
+                              <source srcset="img/flag_br25.jpg" media="(max-width: 850px)" alt="Bandeira do Brasil."/>
+                              <img class="bandeira_brasil_footer" src="img/flag_br35.jpg" alt="Bandeira do Brasil.">
+                            </picture>
+                        </div>
+                        <div class="numero2">
+                            <h3 id="contato-texto2">Fone: +1 (689) 837-9863</h3>
+                            <picture class="bandeira_footer">
+                                <source srcset="img/flag_en20.png" media="(max-width: 600px)" alt="bandeira EUA."/>
+                                <source srcset="img/flag_en25.png" media="(max-width: 850px)" alt="bandeira EUA."/>
+                                <img class="bandeira_eua_footer" src="img/flag_en35.png" alt="Bandeira EUA">
+                            </picture>                       
+                        </div>                                   
+                        <h3 class="email">Contact@driveup.com.br</h3>
+                      </div>
+                </div>
+                <div class="footer_links">
+                    <ul class="follow_links">
+                        <a target="_blank" href="https://www.instagram.com/driveupexecutive/" class="footer_link" id="instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/driveupexecutive/" class="footer_link" id="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a target="_blank" href="https://bit.ly/47FHAut" class="footer_link" id="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </ul>
+                    <button><a id="botao_contato_footer" href="https://bit.ly/47FHAut'">Contato</a></button>
+                </div>
+    
+            </section>        
     </footer>
     <script src="script_turismo.js"></script>
     <script src="script_cabecalho_mobile.js"></script>

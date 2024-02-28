@@ -5,14 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalSlides = slides.length;
 
   function showSlide(index) {
-      slides.forEach((slide) => (slide.style.display = "none"));
-      slides[index].style.display = "block";
+    slides.forEach((slide) => slide.classList.remove("active-slide"));
+    slides[index].classList.add("active-slide");
   }
 
   function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      showSlide(currentIndex);
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
   }
+
   setInterval(nextSlide, 3000);
 
   showSlide(currentIndex); // Mostrar o primeiro slide ao carregar a página
@@ -37,22 +38,20 @@ document.getElementById('saibaMaisBtn').addEventListener('click', function () {
 //script de parceiros
 
 document.addEventListener('DOMContentLoaded', function() {
-  var parceiros = document.querySelector('.parceiro');
+  var parceiros = document.querySelectorAll('.parceiro'); // Seleciona todos os elementos com a classe '.parceiro'
 
-  parceiros.addEventListener('mouseover', function(event) {
-    var target = event.target;
-
-    if (target.classList.contains('parceiro')) {
-      var parceirosArray = Array.from(parceiros.children);
-
-      parceirosArray.forEach(function(parceiro) {
-        if (parceiro !== target) {
-          parceiro.style.flexGrow = '0.5';
+  // Adiciona o evento de mouseover a cada parceiro individualmente
+  parceiros.forEach(function(parceiro) {
+    parceiro.addEventListener('mouseover', function() {
+      // Quando o mouse está sobre um parceiro, esse parceiro cresce e os outros diminuem
+      parceiros.forEach(function(p) {
+        if (p === parceiro) {
+          p.style.flexGrow = '1.5';
+        } else {
+          p.style.flexGrow = '0.5';
         }
       });
-
-      target.style.flexGrow = '1.5';
-    }
+    });
   });
 });
 
